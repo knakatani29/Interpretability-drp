@@ -1,5 +1,7 @@
 import pickle
 from KNN import ActiveKNN
+from SVM import ActiveSVM
+from RandomForest import ActiveRandomForest
 import lime
 from lime import lime_tabular
 import numpy as np
@@ -7,11 +9,10 @@ import numpy as np
 
 """
 Todo:
-
-Need to think about Continuous, Categorical Features.
+ - Need to think about Continuous, Categorical Features.
 """
 
-#Unpickling the file
+#Unpickling all the files
 infile = open("KNN_20_shot_2_way_option_2_BAMDIFIROXTEEM-UHFFFAOYSA-N/KNN_BAMDIFIROXTEEM-UHFFFAOYSA-N_option_2.pkl", "rb")
 activeKNN = pickle.load(infile)
 
