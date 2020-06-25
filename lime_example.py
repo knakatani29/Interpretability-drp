@@ -6,13 +6,37 @@ import lime
 from lime import lime_tabular
 import numpy as np
 
-
 """
 Todo:
  - Need to think about Continuous, Categorical Features.
 """
 
+all_method = ["KNN", "SVM"]
+all_option = ["option1", "option2"]
+all_amines = ['ZEVRFFCPALTVDN-UHFFFAOYSA-N',
+                     'KFQARYBEAKAXIC-UHFFFAOYSA-N',
+                     'NLJDBTZLVTWXRG-UHFFFAOYSA-N',
+                     'LCTUISCIGMWMAT-UHFFFAOYSA-N',
+                     'JERSPYRKVMAEJY-UHFFFAOYSA-N',
+                     'VAWHFUNJDMQUSB-UHFFFAOYSA-N',
+                     'WGYRINYTHSORGH-UHFFFAOYSA-N',
+                     'VNAAUNTYIONOHR-UHFFFAOYSA-N',
+                     'FJFIJIDZQADKEE-UHFFFAOYSA-N',
+                     'XFYICZOIWSBQSK-UHFFFAOYSA-N',
+                     'UMDDLGMCNFAZDX-UHFFFAOYSA-O',
+                     'HBPSMMXRESDUSG-UHFFFAOYSA-N',
+                     'NXRUEVJQMBGVAT-UHFFFAOYSA-N',
+                     'LLWRXQXPJMPHLR-UHFFFAOYSA-N',
+                     'BAMDIFIROXTEEM-UHFFFAOYSA-N',
+                     'XZUCBFLUEBDNSJ-UHFFFAOYSA-N']
+
 #Unpickling all the files
+for method in all_method:
+	for option in all_option:
+		for amine in all_amines:
+
+
+
 infile = open("KNN_20_shot_2_way_option_2_BAMDIFIROXTEEM-UHFFFAOYSA-N/KNN_BAMDIFIROXTEEM-UHFFFAOYSA-N_option_2.pkl", "rb")
 activeKNN = pickle.load(infile)
 
