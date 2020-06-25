@@ -1,0 +1,14 @@
+Method: KNN
+Amine: ZEVRFFCPALTVDN-UHFFFAOYSA-N
+Data: 0
+Prediction: failure with probability 0.5
+True Class: success
+
+
+Method: KNN
+Amine: ZEVRFFCPALTVDN-UHFFFAOYSA-N
+Data: 1
+Prediction: failure with probability 1.0
+True Class: failure
+
+

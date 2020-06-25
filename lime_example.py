@@ -5,6 +5,8 @@ from RandomForest import ActiveRandomForest
 import lime
 from lime import lime_tabular
 import numpy as np
+import matplotlib.pyplot as plt
+import sys
 
 """
 Todo:
@@ -51,6 +53,8 @@ for method in all_method:
 feature_name = ["_rxn_M_acid", "_rxn_M_inorganic", "_rxn_M_organic", "_solv_GBL", "_solv_DMSO", "_solv_DMF","_stoich_mmol_org",	"_stoich_mmol_inorg", "_stoich_mmol_acid", "_stoich_mmol_solv",	"_stoich_org/solv",	"_stoich_inorg/solv","_stoich_acid/solv", "_stoich_org+inorg/solv","_stoich_org+inorg+acid/solv","_stoich_org/liq","_stoich_inorg/liq","_stoich_org+inorg/liq", "_stoich_org/inorg", "_stoich_acid/inorg", "_rxn_Temperature_C",	"_rxn_Reactiontime_s", "_feat_AvgPol", "_feat_Refractivity", "_feat_MaximalProjectionArea",	"_feat_MaximalProjectionRadius", "_feat_maximalprojectionsize", "_feat_MinimalProjectionArea",	"_feat_MinimalProjectionRadius", "_feat_minimalprojectionsize",	"_feat_MolPol",	"_feat_VanderWaalsSurfaceArea",	"_feat_ASA", "_feat_ASA_H", "_feat_ASA_P",	"_feat_ASA-",	"_feat_ASA+", "_feat_ProtPolarSurfaceArea", "_feat_Hacceptorcount", "_feat_Hdonorcount","_feat_RotatableBondCount",	"_raw_standard_molweight", "_feat_AtomCount_N", "_feat_BondCount",	"_feat_ChainAtomCount",	"_feat_RingAtomCount", "_feat_primaryAmine",	"_feat_secondaryAmine",	"_rxn_plateEdgeQ", "_feat_maxproj_per_N", "_raw_RelativeHumidity"]
 class_name = ["failure", "success"]
 
+open('out.txt', 'w')
+
 model_list = [KNN_model, RF_model]
 for model_index in range(2):
 	for activemodel in model_list[model_index]:
@@ -69,23 +73,42 @@ for model_index in range(2):
 
 		#Explaining all instances
 
-		for i in range(3):
+		for i in range(len(x_true)):
 			exp = explainer.explain_instance(x_true[i], model.predict_proba, num_features = 10)
 			lst_explanation = exp.as_list()
+			
+			with open('out.txt', 'a') as f:
+
+				if model_index == 0:
+					print("Method: KNN", file = f)
+				else:
+					print("Method: Random Forest", file = f)
+				print("Amine:", amine, file = f)
+				print("Data:", str(i), file = f)
+				print("Prediction:", class_name[y_pred[i]], "with probability", str(y_pred_prob[i][y_pred[i]]), file = f)
+				print("True Class:", class_name[y_true[i]], file = f)
+				print("Explanation:", lst_explanation, file = f)
+				print("\n", file = f)
+			
+			#fig_explanation = exp.as_pyplot_figure()
+			
+			#Plotting the figure
+			fig = plt.figure()
+			vals = [x[1] for x in lst_explanation]
+			names = [x[0] for x in lst_explanation]
+			vals.reverse()
+			names.reverse()
+			colors = ['green' if x > 0 else 'red' for x in vals]
+			pos = np.arange(len(lst_explanation)) + .5
+			plt.barh(pos, vals, align='edge', color=colors)
+			plt.yticks(pos, names)
+			plt.title('Local Explanation')
 
 			if model_index == 0:
-				print("Method: KNN")
+				fig_name = "fig/Lime_KNN_" + amine + "_" + str(i) + ".png"
 			else:
-				print("Method: Random Forest")
-			print("Amine:", amine)
-			print("Data:", str(i))
-			print("Prediction:", class_name[y_pred[i]], "with probability", str(y_pred_prob[i][y_pred[i]]))
-			print("True Class:", class_name[y_true[i]])
-			print("Explanation:", lst_explanation)
-			#fig_explanation = exp.as_pyplot_figure()
-			#fig_explanation.savefig('Lime_' + amine + '_44.png')
-
-
+				fig_name = "fig/Lime_RF_" + amine + "_" + str(i) + ".png"
+			fig.savefig(fig_name, bbox_inches = 'tight')
 
 
 
