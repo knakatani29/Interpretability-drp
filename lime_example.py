@@ -71,44 +71,46 @@ for model_index in range(2):
 		#Getting the explainer
 		explainer = lime.lime_tabular.LimeTabularExplainer(x_true, feature_names = feature_name, class_names = class_name, discretize_continuous = True)
 
-		#Explaining all instances
 
-		for i in range(len(x_true)):
-			exp = explainer.explain_instance(x_true[i], model.predict_proba, num_features = 10)
-			lst_explanation = exp.as_list()
-			
-			with open('out.txt', 'a') as f:
-
-				if model_index == 0:
-					print("Method: KNN", file = f)
-				else:
-					print("Method: Random Forest", file = f)
-				print("Amine:", amine, file = f)
-				print("Data:", str(i), file = f)
-				print("Prediction:", class_name[y_pred[i]], "with probability", str(y_pred_prob[i][y_pred[i]]), file = f)
-				print("True Class:", class_name[y_true[i]], file = f)
-				print("Explanation:", lst_explanation, file = f)
-				print("\n", file = f)
-			
-			#fig_explanation = exp.as_pyplot_figure()
-			
-			#Plotting the figure
-			fig = plt.figure()
-			vals = [x[1] for x in lst_explanation]
-			names = [x[0] for x in lst_explanation]
-			vals.reverse()
-			names.reverse()
-			colors = ['green' if x > 0 else 'red' for x in vals]
-			pos = np.arange(len(lst_explanation)) + .5
-			plt.barh(pos, vals, align='edge', color=colors)
-			plt.yticks(pos, names)
-			plt.title('Local Explanation')
+		#for i in range(len(x_true)):
+		i = np.random.randint(0, len(x_true))
+		exp = explainer.explain_instance(x_true[i], model.predict_proba, num_features = 10)
+		lst_explanation = exp.as_list()
+		
+		with open('out.txt', 'a') as f:
 
 			if model_index == 0:
-				fig_name = "fig/Lime_KNN_" + amine + "_" + str(i) + ".png"
+				print("Method: KNN", file = f)
 			else:
-				fig_name = "fig/Lime_RF_" + amine + "_" + str(i) + ".png"
-			fig.savefig(fig_name, bbox_inches = 'tight')
+				print("Method: Random Forest", file = f)
+			print("Amine:", amine, file = f)
+			print("Data:", str(i), file = f)
+			print("Prediction:", class_name[y_pred[i]], "with probability", str(y_pred_prob[i][y_pred[i]]), file = f)
+			print("True Class:", class_name[y_true[i]], file = f)
+			print("Explanation:", lst_explanation, file = f)
+			print("\n", file = f)
+		
+		#fig_explanation = exp.as_pyplot_figure()
+		
+		#Plotting the figure
+		fig = plt.figure()
+		vals = [x[1] for x in lst_explanation]
+		names = [x[0] for x in lst_explanation]
+		vals.reverse()
+		names.reverse()
+		colors = ['green' if x > 0 else 'red' for x in vals]
+		pos = np.arange(len(lst_explanation)) + .5
+		plt.barh(pos, vals, align='edge', color=colors)
+		plt.yticks(pos, names)
+		plt.title('Local Explanation')
+
+		if model_index == 0:
+			fig_name = "fig/Lime_KNN_" + amine + "_" + str(i) + ".png"
+		else:
+			fig_name = "fig/Lime_RF_" + amine + "_" + str(i) + ".png"
+		fig.savefig(fig_name, bbox_inches = 'tight')
+
+		plt.close()
 
 
 

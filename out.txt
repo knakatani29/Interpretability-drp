@@ -1,14 +1,512 @@
 Method: KNN
 Amine: ZEVRFFCPALTVDN-UHFFFAOYSA-N
-Data: 0
-Prediction: failure with probability 0.5
+Data: 1047
+Prediction: failure with probability 1.0
+True Class: failure
+Explanation: [('_rxn_Reactiontime_s <= 0.00', -0.33644945309047286), ('_stoich_org/inorg <= -0.29', 0.04275149379775044), ('_feat_ASA > 0.93', -0.03968667847241896), ('-0.27 < _stoich_acid/inorg <= -0.22', 0.03452171277961685), ('_feat_ASA_H > 0.46', -0.02601580173098387), ('_feat_maxproj_per_N > 0.95', -0.022325172517355402), ('_feat_primaryAmine <= 0.47', -0.02008237621721622), ('_feat_ASA+ > 0.75', -0.01901627534822819), ('_feat_Hacceptorcount <= -0.26', 0.016317299139396158), ('_feat_MaximalProjectionRadius > 1.01', -0.01603408277912061)]
+
+
+Method: KNN
+Amine: KFQARYBEAKAXIC-UHFFFAOYSA-N
+Data: 1245
+Prediction: failure with probability 1.0
+True Class: failure
+Explanation: [('_rxn_Reactiontime_s <= 0.00', 0.13479061626234007), ('-0.20 < _stoich_acid/inorg <= -0.06', -0.10295714468588901), ('_stoich_org/inorg <= -0.23', 0.04201201670842661), ('_feat_ProtPolarSurfaceArea > 0.20', -0.03805646083054493), ('_feat_maxproj_per_N <= -0.86', -0.032799936992380256), ('_stoich_mmol_solv <= -0.68', -0.030322550400978893), ('-0.81 < _stoich_org+inorg/solv <= -0.22', -0.029733984157582962), ('0.22 < _feat_ASA+ <= 0.70', 0.02489621344869161), ('-0.52 < _feat_MolPol <= -0.01', -0.02482197048933399), ('_feat_ASA_H <= -0.74', 0.02433416400636013)]
+
+
+Method: KNN
+Amine: NLJDBTZLVTWXRG-UHFFFAOYSA-N
+Data: 769
+Prediction: success with probability 1.0
 True Class: success
+Explanation: [('_rxn_Reactiontime_s <= 0.00', 0.20776457108779528), ('_rxn_M_acid > 0.86', 0.11551637294454851), ('-0.20 < _stoich_acid/inorg <= -0.06', -0.08476180238153273), ('_stoich_mmol_acid > 0.85', 0.04159504708639772), ('-0.58 < _feat_ASA+ <= 0.22', 0.040913032860483464), ('-0.23 < _stoich_org/inorg <= -0.19', 0.03266398440622721), ('_feat_MinimalProjectionArea > 0.87', 0.02599664226775315), ('0.12 < _feat_VanderWaalsSurfaceArea <= 0.96', 0.02551202033847207), ('-0.73 < _feat_ASA_H <= -0.12', 0.02445055152592492), ('_rxn_plateEdgeQ <= -0.76', 0.02257040822000425)]
+
+
+Method: KNN
+Amine: LCTUISCIGMWMAT-UHFFFAOYSA-N
+Data: 820
+Prediction: failure with probability 1.0
+True Class: failure
+Explanation: [('_rxn_M_acid > 0.84', 0.09891084413165371), ('-0.20 < _stoich_acid/inorg <= -0.06', -0.08612214402013534), ('_rxn_Reactiontime_s <= 0.00', 0.0586710924398803), ('_stoich_org+inorg+acid/solv > 0.21', -0.05333752730747888), ('_stoich_acid/solv > 0.14', -0.04281978390147051), ('_stoich_mmol_acid > 0.82', 0.038981254581696885), ('_stoich_org/inorg <= -0.24', 0.022406865368149637), ('_feat_ASA <= -0.60', 0.022100537077828192), ('_feat_ProtPolarSurfaceArea <= -0.25', 0.02188240600426414), ('_feat_Hacceptorcount > -0.26', -0.02152687569448265)]
+
+
+Method: KNN
+Amine: JERSPYRKVMAEJY-UHFFFAOYSA-N
+Data: 35
+Prediction: failure with probability 1.0
+True Class: failure
+Explanation: [('_rxn_Reactiontime_s <= 0.00', 0.18654836828649649), ('_feat_ASA_H > 0.50', -0.08954417553087371), ('-0.20 < _stoich_acid/inorg <= -0.06', -0.07257259207787084), ('-0.15 < _feat_ASA <= 0.46', 0.04235721760083444), ('_feat_Refractivity <= -0.69', 0.0312845797412643), ('_stoich_org/inorg <= -0.23', 0.022838768493993012), ('-0.81 < _stoich_org+inorg/solv <= -0.15', -0.020536937751803163), ('_feat_ProtPolarSurfaceArea <= -0.22', 0.020402299355269556), ('-0.76 < _rxn_plateEdgeQ <= 1.32', -0.018484348266317962), ('_stoich_org+inorg+acid/solv > 0.15', -0.01731598381484585)]
+
+
+Method: KNN
+Amine: VAWHFUNJDMQUSB-UHFFFAOYSA-N
+Data: 1017
+Prediction: failure with probability 1.0
+True Class: failure
+Explanation: [('_rxn_Reactiontime_s <= 0.00', 0.2165632289362548), ('-0.25 < _stoich_acid/inorg <= -0.20', -0.052390919744753), ('_stoich_org+inorg/liq > 0.41', -0.031051796422993636), ('-0.04 < _feat_ASA_H <= 0.41', 0.028628313976820523), ('_feat_ASA+ <= -0.68', 0.026085909108477703), ('_feat_ProtPolarSurfaceArea <= -0.26', 0.024031222233633506), ('_feat_ASA <= -0.67', 0.02383371342005941), ('-0.06 < _rxn_M_acid <= 0.86', -0.021135543472032736), ('-0.57 < _feat_MolPol <= 0.21', -0.021071832512967775), ('_stoich_mmol_org > 0.65', 0.02055791723128825)]
+
+
+Method: KNN
+Amine: WGYRINYTHSORGH-UHFFFAOYSA-N
+Data: 1034
+Prediction: failure with probability 1.0
+True Class: failure
+Explanation: [('_rxn_Reactiontime_s <= 0.00', 0.21726650872909442), ('-0.24 < _stoich_acid/inorg <= -0.20', -0.06222035281421727), ('_rxn_Temperature_C <= 0.16', 0.030384473531456582), ('-0.19 < _stoich_org/inorg <= -0.04', 0.0301530108224387), ('_feat_ASA <= -0.64', 0.027415428881478358), ('_feat_primaryAmine <= 0.47', -0.026395070802252674), ('-0.03 < _feat_ASA_H <= 0.42', 0.02635067225137167), ('-0.24 < _stoich_inorg/liq <= 0.31', 0.02491070344713604), ('_feat_ChainAtomCount <= -0.79', 0.02248296368876492), ('_stoich_inorg/solv > 0.48', -0.020863486505512136)]
+
+
+Method: KNN
+Amine: VNAAUNTYIONOHR-UHFFFAOYSA-N
+Data: 449
+Prediction: failure with probability 0.5
+True Class: failure
+Explanation: [('_feat_maxproj_per_N > 0.95', 0.14755507220830927), ('_rxn_Reactiontime_s <= 0.00', 0.1361180755853502), ('-0.25 < _stoich_acid/inorg <= -0.20', -0.09420597389093585), ('_feat_ASA > 0.51', -0.06694177464282976), ('-0.23 < _stoich_org/inorg <= -0.19', 0.0660377988717521), ('_feat_primaryAmine <= 0.47', -0.03424675205952558), ('0.36 < _feat_minimalprojectionsize <= 0.92', 0.03023876169209815), ('_feat_ProtPolarSurfaceArea <= -0.25', 0.027342917955216543), ('_solv_DMSO <= -0.37', 0.024575950708221057), ('_feat_ASA- > 0.50', -0.021430884706885363)]
+
+
+Method: KNN
+Amine: FJFIJIDZQADKEE-UHFFFAOYSA-N
+Data: 1640
+Prediction: failure with probability 1.0
+True Class: failure
+Explanation: [('_stoich_acid/inorg > -0.07', 0.2752146285374131), ('_rxn_Reactiontime_s > 0.00', -0.2535909024755295), ('_rxn_M_acid > 0.84', 0.10011627175294537), ('_stoich_org/inorg > -0.06', -0.08558160104581307), ('_feat_ASA+ > 0.77', -0.08482551532136982), ('_feat_ASA_H > 0.39', -0.0688689159842241), ('_feat_ASA > 0.93', -0.0656645584403599), ('_feat_maxproj_per_N > 0.98', 0.0546430440626065), ('_stoich_mmol_acid > 0.83', 0.04724883892597255), ('_feat_ProtPolarSurfaceArea > 0.20', -0.04256394418132601)]
+
+
+Method: KNN
+Amine: XFYICZOIWSBQSK-UHFFFAOYSA-N
+Data: 735
+Prediction: failure with probability 1.0
+True Class: failure
+Explanation: [('_rxn_Reactiontime_s <= 0.00', 0.19036433392101426), ('_stoich_acid/inorg <= -0.24', -0.07814752650176525), ('-0.22 < _stoich_org/inorg <= -0.19', 0.052525898642873735), ('_rxn_M_acid <= -0.81', -0.029432769453921374), ('_feat_ProtPolarSurfaceArea <= -0.25', 0.028179641478022877), ('0.02 < _feat_MolPol <= 0.73', 0.027810790162764346), ('_feat_primaryAmine <= 0.47', 0.025820959555111878), ('-0.40 < _feat_ASA_H <= -0.17', 0.01941642995090999), ('_feat_ASA <= -0.69', 0.018746290936129187), ('_stoich_mmol_acid <= -0.81', -0.01867276546962815)]
+
+
+Method: KNN
+Amine: UMDDLGMCNFAZDX-UHFFFAOYSA-O
+Data: 830
+Prediction: failure with probability 1.0
+True Class: failure
+Explanation: [('_rxn_Reactiontime_s <= 0.00', 0.2202714347412296), ('_stoich_acid/inorg <= -0.24', -0.08521203276507663), ('_stoich_org/liq > 0.47', -0.03030574942811917), ('-1.01 < _feat_maxproj_per_N <= 0.06', -0.025503251118391936), ('-0.07 < _rxn_M_acid <= 0.85', -0.024477547434082595), ('_feat_AtomCount_N <= -0.57', 0.023911629523254273), ('_feat_ProtPolarSurfaceArea <= -0.13', 0.023000909859423414), ('_feat_ASA <= -0.66', 0.020181930381611007), ('0.04 < _feat_maximalprojectionsize <= 0.67', -0.019786647143812418), ('_feat_Refractivity <= -0.72', 0.019549349722754496)]
+
+
+Method: KNN
+Amine: HBPSMMXRESDUSG-UHFFFAOYSA-N
+Data: 1157
+Prediction: failure with probability 1.0
+True Class: failure
+Explanation: [('_rxn_Reactiontime_s <= 0.00', 0.20308835551394458), ('_stoich_org/inorg > -0.05', -0.08174992278974039), ('_feat_maxproj_per_N > 1.00', 0.0768968210609166), ('_stoich_acid/inorg > -0.06', 0.07645569745385897), ('_feat_VanderWaalsSurfaceArea > 0.96', -0.06869163979686693), ('-0.81 < _rxn_M_acid <= -0.05', -0.05242067307411909), ('-0.59 < _feat_ASA+ <= 0.21', 0.046019890427331726), ('-0.67 < _feat_ASA <= -0.03', 0.044403574679754566), ('_stoich_mmol_solv <= -0.67', -0.03898279726309777), ('-0.76 < _rxn_plateEdgeQ <= 1.32', -0.0312362888305357)]
+
+
+Method: KNN
+Amine: NXRUEVJQMBGVAT-UHFFFAOYSA-N
+Data: 152
+Prediction: failure with probability 1.0
+True Class: failure
+Explanation: [('_rxn_Reactiontime_s <= 0.00', 0.24584949119280802), ('_stoich_acid/inorg > -0.06', 0.20719552115685116), ('_stoich_org/inorg > -0.04', -0.12245291656391281), ('_feat_ASA <= -0.60', 0.046389834427091436), ('_feat_ASA+ <= -0.68', 0.03277050700735288), ('_feat_ASA_H <= -0.72', 0.03253469605609026), ('_feat_AtomCount_N <= -0.56', 0.03105029218232561), ('_stoich_inorg/solv <= -0.74', 0.0277855329212542), ('_feat_MinimalProjectionArea <= -0.76', -0.019733292801287848), ('-0.22 < _stoich_acid/solv <= 0.16', 0.01772409371263738)]
+
+
+Method: KNN
+Amine: LLWRXQXPJMPHLR-UHFFFAOYSA-N
+Data: 1586
+Prediction: failure with probability 1.0
+True Class: failure
+Explanation: [('_rxn_Reactiontime_s <= 0.00', 0.2148877461493253), ('_feat_ASA > 0.35', -0.10089515141218246), ('_feat_ASA+ > 0.74', -0.09544376535357547), ('_feat_ASA_H > 0.41', -0.09281411666227145), ('_rxn_Temperature_C <= 0.16', -0.045494161636903514), ('-0.23 < _stoich_org/inorg <= -0.20', 0.0367527188038453), ('-0.25 < _stoich_acid/inorg <= -0.21', -0.0318177984723365), ('_feat_primaryAmine <= 0.46', -0.026993227577664796), ('-0.84 < _rxn_M_acid <= -0.12', -0.02696959623014069), ('_solv_DMSO <= -0.37', 0.024794731806082857)]
+
+
+Method: KNN
+Amine: BAMDIFIROXTEEM-UHFFFAOYSA-N
+Data: 953
+Prediction: failure with probability 1.0
+True Class: failure
+Explanation: [('_rxn_Reactiontime_s <= 0.00', 0.2276375926346662), ('_stoich_acid/inorg <= -0.24', -0.09505963126439403), ('_rxn_M_acid <= -0.81', -0.050622631216755955), ('_stoich_mmol_acid <= -0.81', -0.0378781388655415), ('-0.22 < _stoich_org/inorg <= -0.18', 0.036102181279354675), ('_feat_ProtPolarSurfaceArea <= -0.22', 0.03473707862831617), ('_feat_ASA <= -0.61', 0.02469022987786904), ('_feat_AtomCount_N <= -0.56', 0.02259282808953514), ('-0.97 < _feat_maxproj_per_N <= 0.07', -0.020958819494149964), ('-0.14 < _feat_ASA+ <= 0.79', 0.01890874192484832)]
+
+
+Method: KNN
+Amine: XZUCBFLUEBDNSJ-UHFFFAOYSA-N
+Data: 1131
+Prediction: failure with probability 1.0
+True Class: failure
+Explanation: [('_rxn_Reactiontime_s <= 0.00', 0.23764200115240408), ('_stoich_org/inorg > -0.04', -0.0999932178877405), ('-0.19 < _stoich_acid/inorg <= -0.06', -0.09412293489052273), ('_feat_ASA <= -0.61', 0.04543065450435494), ('-0.53 < _feat_VanderWaalsSurfaceArea <= 0.14', 0.032269553487010036), ('_rxn_Temperature_C <= 0.16', -0.03132189647512131), ('_solv_DMSO > -0.37', -0.022793595253257148), ('-0.07 < _feat_ASA_H <= 0.39', 0.022708358932439256), ('_rxn_plateEdgeQ <= -0.76', 0.022213176949988627), ('_rxn_M_organic > 0.68', -0.019318765002663336)]
 
 
 Method: KNN
 Amine: ZEVRFFCPALTVDN-UHFFFAOYSA-N
-Data: 1
+Data: 24
+Prediction: success with probability 1.0
+True Class: success
+Explanation: [('_rxn_plateEdgeQ <= -0.58', 0.3122521072583967), ('_stoich_acid/solv > -0.05', -0.0959825950313482), ('_stoich_org+inorg+acid/solv > -0.05', -0.07660894476910474), ('_rxn_M_acid > 0.52', 0.07128812381088374), ('_stoich_mmol_acid > 0.52', 0.07074875076449127), ('_stoich_org/liq <= -0.63', -0.05910444430730377), ('-0.70 < _stoich_mmol_org <= -0.08', -0.05296911260633993), ('_stoich_org+inorg/liq <= -0.66', -0.05128691430081445), ('-0.70 < _rxn_M_organic <= -0.08', -0.045886555797902955), ('-1.06 < _stoich_org/solv <= -0.20', -0.030109268598461057)]
+
+
+Method: KNN
+Amine: KFQARYBEAKAXIC-UHFFFAOYSA-N
+Data: 31
 Prediction: failure with probability 1.0
 True Class: failure
+Explanation: [('_rxn_plateEdgeQ <= -0.82', 0.09672174189774674), ('-0.07 < _stoich_mmol_acid <= 0.88', 0.07446626522473537), ('-0.78 < _stoich_org/solv <= -0.06', -0.05885628368445637), ('-0.78 < _stoich_inorg/solv <= -0.06', -0.05410074356336391), ('-0.58 < _stoich_org/liq <= -0.08', 0.0499256754239498), ('-0.78 < _stoich_org+inorg/solv <= -0.06', -0.043881996737943366), ('-0.61 < _stoich_org+inorg/liq <= -0.18', 0.02936491362589814), ('-0.60 < _stoich_mmol_inorg <= -0.28', -0.026956698114577994), ('-0.06 < _rxn_M_acid <= 0.88', 0.026011101437674093), ('-0.57 < _stoich_acid/inorg <= -0.34', -0.02215822290713307)]
+
+
+Method: KNN
+Amine: NLJDBTZLVTWXRG-UHFFFAOYSA-N
+Data: 78
+Prediction: failure with probability 1.0
+True Class: failure
+Explanation: [('_rxn_M_acid > 0.30', 0.1723170639411069), ('_stoich_mmol_acid > 0.31', 0.16327307609844302), ('_rxn_M_inorganic <= -0.97', -0.08633739313258407), ('_stoich_acid/solv > 0.02', 0.07767564399508897), ('_stoich_org+inorg/liq <= -0.60', 0.07717801730830907), ('_stoich_mmol_inorg <= -0.97', -0.06683831933291567), ('_stoich_org/liq <= -0.62', 0.06511399627489206), ('_stoich_org+inorg+acid/solv > -0.03', 0.055136438728742763), ('-0.49 < _stoich_org/inorg <= -0.36', 0.0382917101694005), ('_stoich_inorg/liq <= -0.84', 0.031320842750607016)]
+
+
+Method: KNN
+Amine: LCTUISCIGMWMAT-UHFFFAOYSA-N
+Data: 82
+Prediction: failure with probability 1.0
+True Class: failure
+Explanation: [('-0.65 < _rxn_plateEdgeQ <= 1.53', -0.139581223272279), ('_stoich_org/liq > 0.74', -0.0792776536270589), ('_stoich_acid/inorg <= -0.44', -0.05449333107709122), ('_stoich_org/solv > 1.00', 0.04904736044230894), ('-0.61 < _rxn_M_acid <= -0.39', -0.037889833171930995), ('_stoich_org+inorg/liq > 0.74', -0.03250188277709188), ('-0.61 < _stoich_mmol_acid <= -0.39', -0.031229645501859336), ('_stoich_mmol_org > 1.03', -0.030740136227602174), ('_stoich_org+inorg/solv > 1.00', 0.021221909784519658), ('_rxn_M_organic > 1.03', -0.0204489877115124)]
+
+
+Method: KNN
+Amine: JERSPYRKVMAEJY-UHFFFAOYSA-N
+Data: 54
+Prediction: failure with probability 1.0
+True Class: failure
+Explanation: [('_stoich_mmol_solv <= -1.32', -0.11799045232220488), ('_rxn_M_acid <= -0.81', -0.11009253270223235), ('_stoich_org+inorg/liq > 0.81', -0.10858403806806087), ('_stoich_mmol_acid <= -0.81', -0.10622447459660206), ('_stoich_org/liq > 0.34', -0.07328332663200109), ('_rxn_M_organic <= -1.18', -0.06640342386401893), ('-0.90 < _rxn_plateEdgeQ <= 1.11', -0.0637605783239784), ('_stoich_mmol_org <= -1.18', -0.04695688469792757), ('_stoich_org/inorg > -0.30', -0.039522004479708675), ('_stoich_inorg/liq <= -0.65', 0.03807536692594576)]
+
+
+Method: KNN
+Amine: VAWHFUNJDMQUSB-UHFFFAOYSA-N
+Data: 35
+Prediction: failure with probability 1.0
+True Class: failure
+Explanation: [('_rxn_M_organic <= -1.05', -0.107131688187803), ('_stoich_mmol_org <= -1.05', -0.10387475804886329), ('_stoich_mmol_solv <= -0.88', -0.10276279623039292), ('_rxn_M_inorganic <= -0.84', -0.041530648256648255), ('-0.65 < _rxn_plateEdgeQ <= 1.53', -0.03498901974214341), ('-0.86 < _rxn_M_acid <= -0.02', -0.034810089925163865), ('_stoich_acid/inorg > 0.12', -0.031760512705390355), ('_stoich_mmol_inorg <= -0.84', -0.030163002985581375), ('-0.86 < _stoich_mmol_acid <= -0.02', -0.03010742167464567), ('_stoich_acid/solv > 0.52', 0.025678005690123712)]
+
+
+Method: KNN
+Amine: WGYRINYTHSORGH-UHFFFAOYSA-N
+Data: 95
+Prediction: failure with probability 1.0
+True Class: failure
+Explanation: [('_stoich_mmol_acid <= -1.07', -0.09723840466617133), ('-0.65 < _rxn_plateEdgeQ <= 1.53', 0.08981314812392498), ('_rxn_M_acid <= -1.07', -0.08380218442463248), ('_stoich_mmol_inorg > 0.59', 0.05921732495174022), ('_rxn_M_inorganic > 0.59', 0.05895689428535496), ('_stoich_org/solv <= -1.03', 0.03360192062534432), ('_stoich_inorg/solv > 1.03', 0.030744748855498126), ('_stoich_org+inorg/solv <= -1.03', 0.023374605553804807), ('-1.31 < _stoich_mmol_solv <= -0.35', -0.022128373918157047), ('-1.40 < _rxn_M_organic <= -0.40', -0.014969230309531309)]
+
+
+Method: KNN
+Amine: VNAAUNTYIONOHR-UHFFFAOYSA-N
+Data: 93
+Prediction: failure with probability 1.0
+True Class: failure
+Explanation: [('_stoich_mmol_acid > 0.64', 0.05415166085953573), ('_rxn_M_acid > 0.64', 0.04640036850155326), ('-0.50 < _rxn_plateEdgeQ <= 2.00', 0.03345862868795107), ('_stoich_org+inorg/solv > 1.33', -0.025231223959307096), ('_stoich_org/solv <= -1.33', -0.023576910948845696), ('_stoich_inorg/solv > 1.33', -0.023503798646351437), ('_stoich_inorg/liq > 0.72', -0.02049556080222298), ('_stoich_mmol_inorg > 1.17', -0.018896660380510653), ('_rxn_M_inorganic > 1.16', -0.018867020435723813), ('_stoich_mmol_solv > 0.87', 0.009836435957872683)]
+
+
+Method: KNN
+Amine: FJFIJIDZQADKEE-UHFFFAOYSA-N
+Data: 15
+Prediction: failure with probability 1.0
+True Class: failure
+Explanation: [('_stoich_org+inorg/liq > 0.85', -0.10160480266181543), ('_stoich_mmol_acid <= -0.76', -0.08972099679679688), ('_rxn_M_acid <= -0.76', -0.07507730276712674), ('_stoich_org/liq > 0.45', -0.060565556525181835), ('_stoich_mmol_solv > 0.85', -0.05393499234165219), ('_rxn_M_organic > 0.52', -0.05198363984831032), ('_stoich_acid/solv <= -0.59', -0.04399187392435103), ('0.01 < _stoich_inorg/liq <= 1.41', -0.03665187325882591), ('_stoich_mmol_org > 0.52', -0.03411815858275413), ('-0.56 < _stoich_mmol_inorg <= 0.13', 0.026673300797115936)]
+
+
+Method: KNN
+Amine: XFYICZOIWSBQSK-UHFFFAOYSA-N
+Data: 57
+Prediction: failure with probability 1.0
+True Class: failure
+Explanation: [('_rxn_plateEdgeQ <= -0.65', 0.10312651997686378), ('-0.90 < _rxn_Temperature_C <= 1.11', -0.08555557290469461), ('_raw_RelativeHumidity <= -1.11', -0.07430458447206428), ('_stoich_mmol_solv > 0.60', 0.0649658530398434), ('_rxn_M_acid <= -0.81', -0.054081298175917066), ('_stoich_mmol_acid <= -0.82', -0.05335986922480085), ('_stoich_mmol_org > 0.79', 0.051944879652817515), ('_rxn_M_organic > 0.80', 0.04729718113336323), ('_stoich_org+inorg/liq > 0.53', -0.03652077473523449), ('_stoich_org+inorg+acid/solv <= -0.89', 0.0322141842558122)]
+
+
+Method: KNN
+Amine: UMDDLGMCNFAZDX-UHFFFAOYSA-O
+Data: 23
+Prediction: failure with probability 0.5
+True Class: success
+Explanation: [('_rxn_plateEdgeQ <= -0.73', 0.07525665572414342), ('_stoich_inorg/solv > 0.73', 0.07135999598379192), ('_stoich_org+inorg/solv <= -0.73', 0.05925216241171091), ('_stoich_org/solv <= -0.73', 0.05562574136753506), ('_stoich_mmol_solv > 0.61', -0.05377107304603557), ('_stoich_org/liq <= -0.80', 0.03183721236515006), ('-1.00 < _stoich_org+inorg/liq <= -0.17', 0.02760336117357965), ('-0.68 < _rxn_M_organic <= -0.09', 0.025957573533800262), ('_stoich_org/inorg <= -0.59', 0.02561575952908052), ('-0.30 < _stoich_acid/solv <= 0.50', -0.025360855897538795)]
+
+
+Method: KNN
+Amine: HBPSMMXRESDUSG-UHFFFAOYSA-N
+Data: 36
+Prediction: failure with probability 1.0
+True Class: failure
+Explanation: [('_rxn_plateEdgeQ <= -0.65', 0.11042267914856208), ('_stoich_org/solv > 1.15', -0.054398477080216195), ('_stoich_org+inorg/solv > 1.15', -0.04931929950818412), ('_stoich_mmol_solv <= -1.09', 0.04471179467883287), ('_stoich_inorg/solv <= -1.15', -0.04187517482113006), ('_stoich_org+inorg/liq > 0.61', -0.03701881522699561), ('_stoich_org/liq > 0.69', -0.03439459636766771), ('_stoich_org/inorg > 0.56', -0.02615279620760661), ('-1.07 < _stoich_mmol_org <= -0.02', 0.022765464432736363), ('-1.07 < _rxn_M_organic <= -0.02', 0.022134570167332376)]
+
+
+Method: KNN
+Amine: NXRUEVJQMBGVAT-UHFFFAOYSA-N
+Data: 83
+Prediction: failure with probability 1.0
+True Class: failure
+Explanation: [('_stoich_mmol_acid <= -0.84', -0.02976425813274501), ('_rxn_M_acid <= -0.84', -0.027204872329875552), ('_rxn_plateEdgeQ <= -1.11', 0.0252537460372786), ('_stoich_org+inorg/liq > 0.73', -0.019029151773161383), ('_stoich_org/liq > 0.90', -0.018750269558981472), ('_stoich_mmol_org > 0.79', 0.01601470873490112), ('-0.32 < _stoich_inorg/liq <= 0.38', -0.004469739719156921), ('_stoich_mmol_solv > 0.61', 0.004277492581149206), ('-0.32 < _stoich_mmol_inorg <= 0.53', -0.004216581842231517), ('0.33 < _stoich_org/solv <= 1.12', -0.0038301658103512028)]
+
+
+Method: KNN
+Amine: LLWRXQXPJMPHLR-UHFFFAOYSA-N
+Data: 14
+Prediction: failure with probability 1.0
+True Class: failure
+Explanation: [('-0.82 < _rxn_plateEdgeQ <= 1.22', -0.18951010383942402), ('_stoich_mmol_solv <= -0.75', -0.12098673487434124), ('_stoich_mmol_acid > 1.05', 0.11873420899495082), ('_rxn_M_acid > 1.04', 0.1116871997201085), ('_stoich_org/solv <= -1.08', 0.08526356412211884), ('_stoich_acid/inorg > 0.18', -0.0831057028408093), ('_stoich_inorg/solv > 1.08', 0.07943272177089626), ('_stoich_org+inorg/solv <= -1.08', 0.07234237410504894), ('-0.70 < _rxn_M_inorganic <= -0.22', -0.06765071971119703), ('-0.70 < _stoich_mmol_inorg <= -0.21', -0.06586153234040822)]
+
+
+Method: KNN
+Amine: BAMDIFIROXTEEM-UHFFFAOYSA-N
+Data: 10
+Prediction: failure with probability 1.0
+True Class: failure
+Explanation: [('-0.26 < _stoich_mmol_solv <= 0.65', 0.0003917467212191523), ('-0.39 < _stoich_org/inorg <= -0.31', 0.00038187470328397173), ('-0.26 < _rxn_M_organic <= 0.50', 0.00037987088592294794), ('-0.27 < _stoich_acid/inorg <= -0.08', 0.00037907289065144565), ('_rxn_plateEdgeQ <= -1.22', -0.00029753649756502195), ('-0.40 < _stoich_acid/solv <= -0.19', -0.00015696356802285478), ('-0.41 < _stoich_mmol_acid <= 0.33', -0.00014551117630069382), ('-0.64 < _stoich_mmol_inorg <= -0.14', -0.00013914775322401693), ('-0.31 < _stoich_org+inorg/liq <= 0.45', -0.0001380444063921449), ('-0.40 < _stoich_org+inorg+acid/solv <= -0.19', -0.0001377683581768372)]
+
+
+Method: KNN
+Amine: XZUCBFLUEBDNSJ-UHFFFAOYSA-N
+Data: 13
+Prediction: failure with probability 1.0
+True Class: failure
+Explanation: [('-0.53 < _rxn_M_acid <= 0.20', 0.0004221095886305677), ('-0.64 < _stoich_acid/inorg <= -0.10', 0.00041880354306719596), ('0.26 < _stoich_org+inorg/solv <= 1.15', 0.00040178625941261645), ('-0.18 < _stoich_mmol_inorg <= 0.91', 0.00040144673416289125), ('0.26 < _stoich_org/solv <= 1.15', 0.00039941325520606233), ('-0.67 < _stoich_org/liq <= 0.16', -0.00016658948907356), ('_rxn_plateEdgeQ <= -0.42', 0.00016425082970540923), ('-0.54 < _stoich_org+inorg+acid/solv <= 0.26', -0.00016094346335914536), ('-0.63 < _stoich_org/inorg <= -0.53', -0.0001534127847962183), ('-0.94 < _rxn_M_organic <= -0.21', -0.00014616137079718957)]
+
+
+Method: Random Forest
+Amine: ZEVRFFCPALTVDN-UHFFFAOYSA-N
+Data: 395
+Prediction: failure with probability 0.6834911560496318
+True Class: success
+Explanation: [('_rxn_M_acid > 0.86', 0.05616881978546715), ('_stoich_mmol_acid > 0.85', 0.04536029342876652), ('-0.73 < _stoich_mmol_inorg <= -0.19', -0.027251901738026107), ('-0.73 < _rxn_M_inorganic <= -0.19', -0.019499479771481854), ('-0.21 < _stoich_org+inorg+acid/solv <= 0.16', 0.013351049347110903), ('_stoich_org/solv <= -0.74', 0.012794905509340225), ('-0.21 < _stoich_acid/solv <= 0.14', 0.010554835835383814), ('_stoich_org/liq <= -0.72', 0.009741435011448646), ('_feat_AtomCount_N <= -0.65', 0.006139628364672517), ('-0.73 < _stoich_mmol_org <= -0.12', -0.0059266021467734575)]
+
+
+Method: Random Forest
+Amine: KFQARYBEAKAXIC-UHFFFAOYSA-N
+Data: 752
+Prediction: failure with probability 0.9260969342591768
+True Class: failure
+Explanation: [('_rxn_M_acid > 0.85', 0.05093240402735977), ('_stoich_mmol_acid > 0.84', 0.04891451228629755), ('_stoich_mmol_inorg <= -0.73', -0.0275717909750736), ('_rxn_M_inorganic <= -0.73', -0.027304369375485672), ('_stoich_org+inorg+acid/solv > 0.16', 0.020331594165162052), ('_feat_MinimalProjectionArea > 0.79', 0.016309632612972365), ('_stoich_mmol_solv <= -0.68', -0.015481670587228111), ('-0.02 < _feat_BondCount <= 0.84', -0.015454259162284146), ('-0.01 < _feat_MolPol <= 0.77', -0.014294717056994638), ('_stoich_acid/solv > 0.14', 0.013659060753928596)]
+
+
+Method: Random Forest
+Amine: NLJDBTZLVTWXRG-UHFFFAOYSA-N
+Data: 632
+Prediction: success with probability 0.6505568668696324
+True Class: success
+Explanation: [('_rxn_M_acid > 0.86', 0.05940268241216947), ('_stoich_mmol_acid > 0.85', 0.05331378654583223), ('_feat_MolPol > 0.73', 0.03204390283749854), ('-0.19 < _rxn_M_inorganic <= 0.51', 0.015981651110963047), ('_feat_ASA- > 0.62', 0.01301203588317292), ('-0.18 < _stoich_mmol_inorg <= 0.43', 0.01160027118420794), ('_feat_ASA+ <= -0.58', 0.011541978346000382), ('_stoich_acid/solv > 0.14', 0.01138117814033753), ('0.10 < _feat_AvgPol <= 0.72', -0.010014954906460207), ('-0.71 < _stoich_org/liq <= -0.20', -0.006964356937336086)]
+
+
+Method: Random Forest
+Amine: LCTUISCIGMWMAT-UHFFFAOYSA-N
+Data: 1103
+Prediction: success with probability 0.9233837124675773
+True Class: success
+Explanation: [('_stoich_mmol_acid <= -0.82', -0.04398774920624415), ('_rxn_M_acid <= -0.82', -0.03961673264943428), ('_feat_AvgPol > 0.78', 0.02966784230157255), ('_feat_MinimalProjectionArea > 0.84', 0.02596513180674194), ('-0.17 < _rxn_M_inorganic <= 0.65', 0.02454275212090812), ('_feat_MolPol > 0.70', 0.02079688102751099), ('_stoich_mmol_org > 0.68', 0.018697398879082824), ('_feat_maxproj_per_N > 1.04', 0.018389326193334218), ('_stoich_mmol_solv > 0.88', 0.01556585521039712), ('_stoich_acid/solv <= -0.45', -0.015496038251203792)]
+
+
+Method: Random Forest
+Amine: JERSPYRKVMAEJY-UHFFFAOYSA-N
+Data: 1237
+Prediction: success with probability 0.9409044302787608
+True Class: success
+Explanation: [('_feat_MolPol > 0.80', 0.0342330934943177), ('-0.81 < _rxn_M_acid <= -0.06', -0.03322550191897926), ('_feat_maxproj_per_N > 0.94', 0.031619373043837905), ('-0.81 < _stoich_mmol_acid <= -0.06', -0.026062221979810167), ('_feat_AvgPol > 0.67', 0.02572464005696868), ('_feat_MinimalProjectionArea > 0.85', 0.02544348129178283), ('_stoich_org/solv <= -0.76', 0.021628028309194178), ('-0.20 < _rxn_M_inorganic <= 0.51', 0.01650240494042628), ('_feat_BondCount > 0.73', 0.015073950964472949), ('_stoich_org+inorg+acid/solv <= -0.39', -0.01355062500898082)]
+
+
+Method: Random Forest
+Amine: VAWHFUNJDMQUSB-UHFFFAOYSA-N
+Data: 1259
+Prediction: failure with probability 0.9861427958455359
+True Class: failure
+Explanation: [('_rxn_M_acid <= -0.81', -0.05579246301317478), ('_stoich_mmol_acid <= -0.80', -0.051101316592548233), ('_stoich_mmol_inorg > 0.48', 0.025874284762834564), ('_rxn_M_inorganic > 0.55', 0.02301763583756014), ('_stoich_acid/solv <= -0.39', -0.016128912337227953), ('_stoich_mmol_solv > 0.89', 0.015554553725379994), ('_feat_ASA- <= -0.75', -0.013219911752399203), ('-0.57 < _feat_MolPol <= 0.21', -0.012414140963498427), ('_feat_maxproj_per_N <= -0.85', -0.01157663943994301), ('_stoich_org/liq > 0.41', -0.011552697055259515)]
+
+
+Method: Random Forest
+Amine: WGYRINYTHSORGH-UHFFFAOYSA-N
+Data: 271
+Prediction: failure with probability 0.8886603660137357
+True Class: failure
+Explanation: [('_rxn_M_acid <= -0.80', -0.055884719715951), ('_stoich_mmol_acid <= -0.80', -0.038934275492863775), ('_stoich_mmol_inorg > 0.45', 0.03612350250086413), ('_stoich_org/solv <= -0.70', 0.022608147113845584), ('_stoich_org+inorg+acid/solv <= -0.40', -0.02057784832815999), ('_rxn_M_inorganic > 0.48', 0.017291220310333446), ('_stoich_mmol_solv > 0.87', 0.01562557754431234), ('_stoich_acid/solv <= -0.40', -0.015356718981193555), ('_feat_maxproj_per_N <= -0.83', -0.01444535787803159), ('_feat_MolPol <= -0.51', -0.013123272609742147)]
+
+
+Method: Random Forest
+Amine: VNAAUNTYIONOHR-UHFFFAOYSA-N
+Data: 55
+Prediction: failure with probability 0.974491259570773
+True Class: failure
+Explanation: [('-0.81 < _rxn_M_acid <= -0.07', -0.03976344245499758), ('-0.81 < _stoich_mmol_acid <= -0.06', -0.031257217548000704), ('_rxn_M_inorganic > 0.51', 0.027123668053730877), ('_feat_maxproj_per_N <= -0.84', -0.024743192987808863), ('_rxn_M_organic > 0.73', 0.021616147507531172), ('_stoich_mmol_inorg > 0.43', 0.017895682271397765), ('_stoich_mmol_org > 0.62', 0.01414773108175869), ('_stoich_mmol_solv > 0.87', 0.01414529275118655), ('_feat_MolPol <= -0.50', -0.013646533779040827), ('-0.11 < _stoich_org/solv <= 0.53', -0.01175398035023862)]
+
+
+Method: Random Forest
+Amine: FJFIJIDZQADKEE-UHFFFAOYSA-N
+Data: 1656
+Prediction: failure with probability 0.9743218951209239
+True Class: failure
+Explanation: [('_rxn_M_acid > 0.84', 0.062675048228074), ('_stoich_mmol_acid > 0.83', 0.04156177049239116), ('_feat_MolPol > 0.76', 0.03033091149214589), ('_rxn_M_organic > 0.64', 0.021662228856055572), ('-0.04 < _stoich_org/solv <= 0.53', -0.01966813889065132), ('_feat_maxproj_per_N > 0.98', 0.018654777767418786), ('_stoich_mmol_solv > 0.85', 0.015990637819134606), ('_stoich_acid/solv > 0.12', 0.013275151410287556), ('-0.20 < _stoich_mmol_inorg <= 0.46', 0.01270015700196611), ('_feat_MinimalProjectionArea > 0.81', 0.012518682584399171)]
+
+
+Method: Random Forest
+Amine: XFYICZOIWSBQSK-UHFFFAOYSA-N
+Data: 21
+Prediction: failure with probability 0.9189098866926987
+True Class: failure
+Explanation: [('_stoich_mmol_inorg <= -0.74', -0.023200465883674883), ('_rxn_M_inorganic <= -0.74', -0.021712727061596656), ('-0.09 < _rxn_M_acid <= 0.85', 0.02082356283785413), ('-0.09 < _stoich_mmol_acid <= 0.84', 0.019115779077255153), ('_stoich_mmol_solv <= -0.69', -0.018313597445399975), ('_stoich_org+inorg+acid/solv > 0.14', 0.011274780025158339), ('-0.66 < _feat_AvgPol <= -0.02', -0.010075789179659409), ('_stoich_acid/solv > 0.13', 0.009451813445135038), ('_feat_ProtPolarSurfaceArea <= -0.25', 0.009137335911912401), ('_stoich_org/inorg > -0.05', -0.008122087216952822)]
+
+
+Method: Random Forest
+Amine: UMDDLGMCNFAZDX-UHFFFAOYSA-O
+Data: 500
+Prediction: failure with probability 0.9235679327139107
+True Class: failure
+Explanation: [('-0.07 < _rxn_M_acid <= 0.85', 0.03079495704115304), ('_rxn_M_organic <= -0.72', -0.024159823227722203), ('_stoich_mmol_org <= -0.73', -0.021569449512978484), ('_rxn_M_inorganic <= -0.73', -0.021501432872851316), ('_stoich_mmol_inorg <= -0.73', -0.021297939430510338), ('-0.07 < _stoich_mmol_acid <= 0.85', 0.020968299915238863), ('_stoich_org/inorg > -0.05', -0.016369322149317966), ('_stoich_org/solv <= -0.76', 0.014352977243214236), ('_feat_ASA+ <= -0.71', 0.012067740719942797), ('_feat_ProtPolarSurfaceArea <= -0.13', 0.011602860353628758)]
+
+
+Method: Random Forest
+Amine: HBPSMMXRESDUSG-UHFFFAOYSA-N
+Data: 393
+Prediction: failure with probability 0.9871913756791584
+True Class: failure
+Explanation: [('-0.81 < _stoich_mmol_acid <= -0.05', -0.04296546299170808), ('-0.81 < _rxn_M_acid <= -0.05', -0.03771240027921552), ('-0.72 < _rxn_M_inorganic <= -0.19', -0.015606507173905226), ('_feat_Hdonorcount <= -0.65', 0.014253337330995404), ('_stoich_org/solv <= -0.72', 0.014230245468899814), ('_stoich_org+inorg+acid/solv <= -0.39', -0.012604941425301164), ('0.35 < _raw_RelativeHumidity <= 0.78', -0.011805982139526567), ('0.05 < _stoich_mmol_solv <= 0.90', 0.010886148997086528), ('0.21 < _feat_ASA+ <= 0.69', -0.010356838806316961), ('_feat_ChainAtomCount <= -0.85', 0.009711106824134024)]
+
+
+Method: Random Forest
+Amine: NXRUEVJQMBGVAT-UHFFFAOYSA-N
+Data: 649
+Prediction: failure with probability 0.9748739496086656
+True Class: failure
+Explanation: [('_stoich_mmol_acid <= -0.82', -0.049354705122786766), ('_rxn_M_acid <= -0.82', -0.03560591589319027), ('_feat_MolPol <= -0.48', -0.02554882645412678), ('_stoich_acid/solv <= -0.40', -0.023720212640694384), ('-0.18 < _rxn_M_inorganic <= 0.47', 0.015315842602084899), ('0.01 < _stoich_org/solv <= 0.52', -0.014397828598549472), ('-0.18 < _stoich_mmol_inorg <= 0.45', 0.014172017584270731), ('_feat_AvgPol <= -0.47', -0.010546307078348444), ('_stoich_org+inorg+acid/solv <= -0.40', -0.00903260249145632), ('_feat_RotatableBondCount <= -0.84', 0.008328586676466514)]
+
+
+Method: Random Forest
+Amine: LLWRXQXPJMPHLR-UHFFFAOYSA-N
+Data: 1107
+Prediction: failure with probability 0.8244356087762238
+True Class: failure
+Explanation: [('-0.84 < _rxn_M_acid <= -0.12', -0.037419903063056474), ('-0.84 < _stoich_mmol_acid <= -0.12', -0.03545181069930215), ('_stoich_mmol_org > 0.59', 0.01778260078264196), ('-0.75 < _rxn_M_inorganic <= -0.24', -0.015718192299568678), ('-0.75 < _stoich_mmol_inorg <= -0.24', -0.015619480220169216), ('_rxn_M_organic > 0.62', 0.014764675239861573), ('_stoich_org+inorg/liq > 0.44', 0.010953277057389854), ('-0.89 < _feat_RingAtomCount <= 1.13', 0.010865343972314874), ('-0.48 < _feat_BondCount <= -0.02', -0.010770784526786847), ('-0.64 < _feat_MolPol <= 0.07', -0.009791447400815749)]
+
+
+Method: Random Forest
+Amine: BAMDIFIROXTEEM-UHFFFAOYSA-N
+Data: 288
+Prediction: failure with probability 0.647620084048002
+True Class: failure
+Explanation: [('-0.04 < _rxn_M_acid <= 0.86', 0.024186258753724644), ('-0.05 < _stoich_mmol_acid <= 0.85', 0.02324161583462882), ('_stoich_mmol_org <= -0.73', -0.022816201496228403), ('_stoich_org/solv <= -0.73', 0.018664173913565094), ('_rxn_M_organic <= -0.73', -0.017643179245395605), ('_feat_ASA_P > 0.86', -0.014223374430505278), ('_stoich_org/inorg <= -0.22', 0.012944250318568126), ('_feat_ProtPolarSurfaceArea > 0.22', -0.012544379882506514), ('_feat_MolPol <= -0.54', -0.01149550763173706), ('_feat_maxproj_per_N <= -0.97', -0.010148632161935746)]
+
+
+Method: Random Forest
+Amine: XZUCBFLUEBDNSJ-UHFFFAOYSA-N
+Data: 1537
+Prediction: failure with probability 0.9512160124646973
+True Class: failure
+Explanation: [('-0.81 < _rxn_M_acid <= -0.05', -0.0395090323126873), ('-0.81 < _stoich_mmol_acid <= -0.05', -0.023521197681498317), ('_stoich_mmol_org <= -0.72', -0.0229059312191016), ('_stoich_org/solv <= -0.77', 0.01814894305911746), ('-0.73 < _stoich_mmol_inorg <= -0.18', -0.017257455394910574), ('-0.73 < _rxn_M_inorganic <= -0.18', -0.01673262443199831), ('-0.56 < _feat_Hdonorcount <= 1.80', -0.014982825618298412), ('_rxn_M_organic <= -0.72', -0.013205705540926043), ('_feat_ASA+ > 0.76', -0.010856853618184987), ('-0.23 < _stoich_org/inorg <= -0.19', 0.009495978950659897)]
+
+
+Method: Random Forest
+Amine: ZEVRFFCPALTVDN-UHFFFAOYSA-N
+Data: 28
+Prediction: success with probability 0.9582380952380951
+True Class: success
+Explanation: [('-0.95 < _stoich_mmol_org <= -0.26', -0.07418193501040661), ('-0.95 < _rxn_M_organic <= -0.26', -0.058258741923799394), ('-0.03 < _stoich_mmol_solv <= 0.85', 0.048822911884763585), ('-0.64 < _stoich_mmol_acid <= -0.10', -0.026616565412221464), ('_rxn_plateEdgeQ <= -0.82', 0.024602165702020225), ('-0.64 < _rxn_M_acid <= -0.10', -0.023839106128177755), ('-0.29 < _stoich_org/inorg <= -0.29', 0.021348300035475908), ('-0.26 < _stoich_acid/inorg <= -0.25', 0.0190662876327471), ('-0.95 < _stoich_org/liq <= -0.38', 0.018091953811321126), ('0.05 < _rxn_M_inorganic <= 1.01', 0.016892195671873503)]
+
+
+Method: Random Forest
+Amine: KFQARYBEAKAXIC-UHFFFAOYSA-N
+Data: 6
+Prediction: success with probability 0.6716666666666665
+True Class: success
+Explanation: [('_stoich_mmol_acid > 1.31', 0.14946230550169243), ('_rxn_M_acid > 1.31', 0.14710599110901856), ('_stoich_org/liq <= -1.08', 0.0448338508511119), ('_stoich_org/solv <= -0.64', -0.037157235914759744), ('_stoich_mmol_inorg <= -0.64', -0.029414591377938407), ('_stoich_org/inorg > -0.34', -0.026548756860812883), ('_stoich_org+inorg/liq <= -0.95', 0.018437470120917475), ('_stoich_acid/inorg > -0.02', 0.01646745756877693), ('_stoich_inorg/solv <= -0.64', -0.01633266685300143), ('_rxn_M_inorganic <= -0.65', -0.0151622061819642)]
+
+
+Method: Random Forest
+Amine: NLJDBTZLVTWXRG-UHFFFAOYSA-N
+Data: 14
+Prediction: failure with probability 1.0
+True Class: failure
+Explanation: [('-1.03 < _rxn_M_acid <= -0.11', -0.06996974925869692), ('-1.02 < _stoich_mmol_acid <= -0.11', -0.06143188168593973), ('-0.57 < _rxn_M_inorganic <= 0.17', -0.04185728019960192), ('-0.63 < _stoich_org+inorg+acid/solv <= -0.30', -0.04138485446898872), ('-0.57 < _stoich_mmol_inorg <= 0.16', -0.03633217627389227), ('-0.62 < _stoich_acid/solv <= -0.31', -0.03535772472099958), ('_stoich_org/solv <= -0.60', -0.030104559796319506), ('_stoich_inorg/solv <= -0.60', -0.024827237743052087), ('_rxn_M_organic > 0.83', 0.02381458554527703), ('_stoich_org/inorg > -0.24', -0.022837611863475424)]
+
+
+Method: Random Forest
+Amine: LCTUISCIGMWMAT-UHFFFAOYSA-N
+Data: 7
+Prediction: failure with probability 1.0
+True Class: failure
+Explanation: [('-0.56 < _rxn_M_acid <= -0.38', -0.04774925390170238), ('-0.26 < _stoich_org+inorg+acid/solv <= -0.25', -0.04745960698390994), ('-0.56 < _stoich_mmol_acid <= -0.38', -0.03992271328304791), ('_stoich_org/liq > 0.80', -0.03624487959451076), ('-0.26 < _stoich_acid/solv <= -0.25', -0.03327140438246922), ('_rxn_M_inorganic > 0.88', 0.013851543819434476), ('_stoich_org+inorg/liq > 0.86', -0.012645671682018345), ('_stoich_acid/inorg <= -0.25', -0.01116601706156715), ('_rxn_M_organic > 0.76', -0.009195174198756494), ('_stoich_mmol_org > 0.76', -0.00903876787765623)]
+
+
+Method: Random Forest
+Amine: JERSPYRKVMAEJY-UHFFFAOYSA-N
+Data: 12
+Prediction: failure with probability 0.9651388888888889
+True Class: failure
+Explanation: [('-0.15 < _stoich_mmol_acid <= 0.80', 0.05846884955034686), ('-0.15 < _rxn_M_acid <= 0.80', 0.032032313113763936), ('_stoich_org+inorg/liq <= -0.68', 0.029526108368600052), ('_rxn_M_inorganic <= -0.33', -0.027067935705454273), ('_stoich_org+inorg+acid/solv > 0.11', 0.025919399430788265), ('-0.83 < _stoich_org/liq <= -0.37', 0.0202316785496441), ('_stoich_mmol_solv <= -0.52', -0.01877553685041062), ('_stoich_inorg/liq <= -0.45', 0.012598177927571189), ('_stoich_mmol_inorg <= -0.33', -0.006076128944726992), ('_stoich_acid/inorg > -0.26', -0.005982217605999094)]
+
+
+Method: Random Forest
+Amine: VAWHFUNJDMQUSB-UHFFFAOYSA-N
+Data: 32
+Prediction: failure with probability 0.895
+True Class: failure
+Explanation: [('-0.87 < _stoich_mmol_acid <= 0.04', -0.04297721985520409), ('-0.87 < _rxn_M_acid <= 0.04', -0.027461088715033655), ('0.03 < _stoich_mmol_solv <= 0.83', 0.021732309832391248), ('-0.51 < _stoich_org/inorg <= -0.48', 0.013073897614110529), ('-0.60 < _stoich_org+inorg+acid/solv <= -0.23', -0.012568801440418371), ('0.43 < _stoich_org+inorg/solv <= 1.26', 0.012369041681346647), ('-0.67 < _stoich_acid/solv <= -0.25', -0.011639166676255603), ('0.16 < _rxn_M_inorganic <= 1.03', 0.01121428989376091), ('-0.07 < _stoich_org/liq <= 0.88', -0.010631788455541745), ('0.29 < _stoich_mmol_org <= 1.08', 0.010553847608871555)]
+
+
+Method: Random Forest
+Amine: WGYRINYTHSORGH-UHFFFAOYSA-N
+Data: 26
+Prediction: failure with probability 0.955
+True Class: failure
+Explanation: [('_stoich_mmol_solv > 0.89', 0.03266537508841896), ('-0.39 < _stoich_acid/solv <= 0.05', 0.024921849054676988), ('-0.90 < _rxn_plateEdgeQ <= 1.11', 0.021768634561682536), ('-0.03 < _rxn_M_inorganic <= 0.57', 0.019826857278861267), ('-0.03 < _stoich_mmol_inorg <= 0.57', 0.018279510645151643), ('_stoich_mmol_org > 0.86', 0.017064168397076744), ('-0.38 < _stoich_org+inorg+acid/solv <= 0.05', 0.014159530067082184), ('-0.72 < _stoich_inorg/liq <= -0.24', -0.01179281101539706), ('-0.34 < _stoich_org/inorg <= -0.15', -0.011770474620511414), ('-0.88 < _stoich_inorg/solv <= -0.04', -0.011126405084914172)]
+
+
+Method: Random Forest
+Amine: VNAAUNTYIONOHR-UHFFFAOYSA-N
+Data: 7
+Prediction: failure with probability 1.0
+True Class: failure
+Explanation: [('-1.51 < _stoich_org/solv <= -0.38', -0.042640293485461694), ('0.38 < _stoich_inorg/solv <= 1.51', -0.032493224768837196), ('-0.49 < _stoich_org/inorg <= -0.41', -0.024350017831115532), ('0.38 < _stoich_org+inorg/solv <= 1.51', -0.020475431751164556), ('-0.26 < _stoich_inorg/liq <= 0.67', -0.01971423069904193), ('-0.53 < _stoich_mmol_acid <= 0.32', -0.015705673121498676), ('-0.32 < _stoich_acid/inorg <= -0.28', -0.013064315806960804), ('-0.02 < _rxn_M_organic <= 0.74', -0.012484453195869692), ('-0.47 < _stoich_org+inorg/liq <= 0.34', -0.011118019260810777), ('_rxn_M_inorganic > 1.13', -0.008442681953397698)]
+
+
+Method: Random Forest
+Amine: FJFIJIDZQADKEE-UHFFFAOYSA-N
+Data: 26
+Prediction: failure with probability 0.94
+True Class: failure
+Explanation: [('_stoich_mmol_acid <= -0.81', -0.04498529357388779), ('_rxn_M_acid <= -0.81', -0.029362146339304878), ('-0.73 < _stoich_org/liq <= -0.11', 0.027937411724893092), ('_stoich_inorg/solv <= -0.97', -0.027046485893161613), ('_stoich_org+inorg/liq <= -0.77', 0.023366529296631286), ('_stoich_mmol_org <= -0.76', 0.01533526401934161), ('_rxn_M_inorganic <= -0.78', -0.01416643246556812), ('_stoich_org/inorg > 0.48', -0.013254969107641415), ('_stoich_inorg/liq <= -0.84', -0.013034531528410604), ('_rxn_M_organic <= -0.76', 0.012603973219550415)]
+
+
+Method: Random Forest
+Amine: XFYICZOIWSBQSK-UHFFFAOYSA-N
+Data: 41
+Prediction: failure with probability 0.99
+True Class: failure
+Explanation: [('-0.90 < _raw_RelativeHumidity <= 1.11', 0.028694498367231022), ('-0.94 < _rxn_M_inorganic <= -0.32', -0.02732105200531647), ('-0.94 < _stoich_mmol_inorg <= -0.33', -0.02568269707695416), ('-0.67 < _stoich_mmol_solv <= -0.05', -0.025474816665377792), ('-0.26 < _stoich_inorg/liq <= 0.89', 0.023335619498231864), ('-1.20 < _rxn_M_acid <= -0.05', -0.02163506413450016), ('-0.04 < _stoich_org/liq <= 0.89', -0.021573588044356905), ('-1.20 < _stoich_mmol_acid <= -0.05', -0.017553962094978972), ('-0.60 < _stoich_mmol_org <= 0.02', -0.011651642924286441), ('-0.46 < _stoich_acid/inorg <= -0.33', 0.008867741143696801)]
+
+
+Method: Random Forest
+Amine: UMDDLGMCNFAZDX-UHFFFAOYSA-O
+Data: 79
+Prediction: failure with probability 1.0
+True Class: failure
+Explanation: [('-0.13 < _stoich_org/liq <= 0.48', -0.0291003954687694), ('-0.55 < _stoich_org+inorg+acid/solv <= -0.39', -0.023514905589614388), ('0.04 < _stoich_org+inorg/liq <= 0.80', -0.021921738653726666), ('_stoich_mmol_org > 0.50', -0.016740435916227363), ('_rxn_M_organic > 0.51', -0.014710272913424104), ('0.12 < _stoich_org+inorg/solv <= 1.02', -0.011482311486243351), ('-0.24 < _stoich_mmol_acid <= 0.66', 0.010636123641237005), ('-0.45 < _stoich_acid/inorg <= 0.38', 0.0077292180424689), ('0.12 < _stoich_org/solv <= 1.02', -0.007277694113515432), ('_stoich_mmol_solv > 0.68', 0.006243099588679205)]
+
+
+Method: Random Forest
+Amine: HBPSMMXRESDUSG-UHFFFAOYSA-N
+Data: 90
+Prediction: failure with probability 1.0
+True Class: failure
+Explanation: [('0.22 < _stoich_mmol_org <= 1.14', -0.02125991289685848), ('_stoich_org+inorg/liq > 1.06', -0.016623421115912175), ('-0.83 < _stoich_inorg/liq <= 0.06', -0.014167517933413294), ('_rxn_M_acid <= -1.29', -0.012115287882055717), ('_stoich_mmol_inorg <= -0.97', -0.011501158230486775), ('_rxn_M_inorganic <= -0.97', -0.008232946683168842), ('_stoich_org/solv > 1.17', 0.00815093379419739), ('0.22 < _rxn_M_organic <= 1.14', -0.007202873849449626), ('_stoich_acid/solv <= -0.98', -0.0065083135728398606), ('_stoich_org/inorg > 1.21', 0.005554149859212385)]
+
+
+Method: Random Forest
+Amine: NXRUEVJQMBGVAT-UHFFFAOYSA-N
+Data: 90
+Prediction: failure with probability 1.0
+True Class: failure
+Explanation: [('-0.33 < _stoich_mmol_acid <= 0.40', -0.02392189613409862), ('-0.33 < _rxn_M_acid <= 0.40', -0.021940695707670498), ('_rxn_M_inorganic <= -0.83', -0.020205367488825104), ('_stoich_mmol_inorg <= -0.82', -0.014754696564788275), ('_stoich_acid/inorg > -0.15', 0.013373062942492442), ('_stoich_inorg/solv <= -0.83', -0.012425411183734275), ('0.02 < _stoich_org/liq <= 0.65', -0.01116415263364422), ('-0.59 < _stoich_org+inorg/liq <= 0.14', -0.011119950211713686), ('-0.50 < _stoich_org+inorg+acid/solv <= 0.13', -0.011101914646324448), ('_stoich_org/solv > 0.83', -0.006769060770058761)]
+
+
+Method: Random Forest
+Amine: LLWRXQXPJMPHLR-UHFFFAOYSA-N
+Data: 19
+Prediction: failure with probability 0.99
+True Class: failure
+Explanation: [('_stoich_mmol_inorg <= -0.89', -0.03710921880739346), ('_rxn_M_organic <= -0.26', -0.02960829729617362), ('_stoich_acid/inorg > -0.09', -0.028537993589418265), ('-0.13 < _rxn_M_acid <= 0.81', 0.025196904133394534), ('_stoich_org/solv > 1.24', -0.025156119043765038), ('-0.13 < _stoich_mmol_acid <= 0.82', 0.021909732235462637), ('-0.60 < _stoich_org/liq <= 0.03', 0.021325050177565575), ('_rxn_M_inorganic <= -0.89', -0.01982775274285903), ('_stoich_inorg/solv <= -1.24', -0.017957163673197905), ('_stoich_mmol_solv <= -0.33', -0.017513487564379395)]
+
+
+Method: Random Forest
+Amine: BAMDIFIROXTEEM-UHFFFAOYSA-N
+Data: 28
+Prediction: failure with probability 1.0
+True Class: failure
+Explanation: [('0.27 < _stoich_org/solv <= 0.87', -0.007827863518779737), ('-0.64 < _stoich_org+inorg+acid/solv <= 0.27', -0.004523465413126809), ('-0.45 < _stoich_acid/inorg <= -0.28', -0.0031204013229919458), ('-0.64 < _stoich_acid/solv <= 0.28', -0.0028765058061019765), ('-0.50 < _stoich_mmol_acid <= 0.51', -0.002738007285060452), ('-0.34 < _stoich_mmol_inorg <= 0.27', -0.0025103699622301585), ('-0.34 < _rxn_M_inorganic <= 0.27', 0.00226254936477837), ('-0.74 < _stoich_inorg/liq <= -0.36', -0.0016383894515899402), ('0.22 < _rxn_M_organic <= 1.07', -0.001637091143252519), ('0.08 < _stoich_mmol_solv <= 1.00', -0.0016369777941377852)]
+
+
+Method: Random Forest
+Amine: XZUCBFLUEBDNSJ-UHFFFAOYSA-N
+Data: 36
+Prediction: failure with probability 1.0
+True Class: failure
+Explanation: [('_stoich_org/liq <= -1.31', -0.008537553567020004), ('_rxn_M_inorganic <= -0.90', -0.008145782318691947), ('_stoich_acid/solv > 0.94', -0.0080345799480147), ('_stoich_org+inorg/solv <= -0.92', 0.005192302541808467), ('_stoich_acid/inorg > 0.25', -0.004727053847404107), ('_stoich_inorg/solv <= -0.92', 0.003977947181540758), ('_stoich_mmol_inorg <= -0.90', -0.003831836972556441), ('_stoich_org/solv <= -0.92', 0.0032992445668061973), ('_rxn_M_organic <= -1.16', -0.003161903470394656), ('_stoich_mmol_org <= -1.16', -0.0027537769389732064)]
 
 
