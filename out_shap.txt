@@ -1,0 +1,480 @@
+Method: KNN
+Amine: ZEVRFFCPALTVDN-UHFFFAOYSA-N
+Data: 1479
+Prediction: failure with probability 1.0
+True Class: failure
+Using only 100 samples because of too many background datas.
+
+
+Method: KNN
+Amine: KFQARYBEAKAXIC-UHFFFAOYSA-N
+Data: 1056
+Prediction: failure with probability 1.0
+True Class: failure
+Using only 100 samples because of too many background datas.
+
+
+Method: KNN
+Amine: NLJDBTZLVTWXRG-UHFFFAOYSA-N
+Data: 134
+Prediction: failure with probability 1.0
+True Class: failure
+Using only 100 samples because of too many background datas.
+
+
+Method: KNN
+Amine: LCTUISCIGMWMAT-UHFFFAOYSA-N
+Data: 1105
+Prediction: success with probability 1.0
+True Class: success
+Using only 100 samples because of too many background datas.
+
+
+Method: KNN
+Amine: JERSPYRKVMAEJY-UHFFFAOYSA-N
+Data: 1390
+Prediction: failure with probability 1.0
+True Class: failure
+Using only 100 samples because of too many background datas.
+
+
+Method: KNN
+Amine: VAWHFUNJDMQUSB-UHFFFAOYSA-N
+Data: 600
+Prediction: failure with probability 1.0
+True Class: failure
+Using only 100 samples because of too many background datas.
+
+
+Method: KNN
+Amine: WGYRINYTHSORGH-UHFFFAOYSA-N
+Data: 1401
+Prediction: failure with probability 1.0
+True Class: failure
+Using only 100 samples because of too many background datas.
+
+
+Method: KNN
+Amine: VNAAUNTYIONOHR-UHFFFAOYSA-N
+Data: 862
+Prediction: failure with probability 0.5
+True Class: failure
+Using only 100 samples because of too many background datas.
+
+
+Method: KNN
+Amine: FJFIJIDZQADKEE-UHFFFAOYSA-N
+Data: 1193
+Prediction: failure with probability 0.5
+True Class: failure
+Using only 100 samples because of too many background datas.
+
+
+Method: KNN
+Amine: XFYICZOIWSBQSK-UHFFFAOYSA-N
+Data: 1383
+Prediction: failure with probability 1.0
+True Class: failure
+Using only 100 samples because of too many background datas.
+
+
+Method: KNN
+Amine: UMDDLGMCNFAZDX-UHFFFAOYSA-O
+Data: 105
+Prediction: failure with probability 1.0
+True Class: failure
+Using only 100 samples because of too many background datas.
+
+
+Method: KNN
+Amine: HBPSMMXRESDUSG-UHFFFAOYSA-N
+Data: 385
+Prediction: failure with probability 0.5
+True Class: failure
+Using only 100 samples because of too many background datas.
+
+
+Method: KNN
+Amine: NXRUEVJQMBGVAT-UHFFFAOYSA-N
+Data: 1523
+Prediction: failure with probability 1.0
+True Class: failure
+Using only 100 samples because of too many background datas.
+
+
+Method: KNN
+Amine: LLWRXQXPJMPHLR-UHFFFAOYSA-N
+Data: 1188
+Prediction: failure with probability 1.0
+True Class: failure
+Using only 100 samples because of too many background datas.
+
+
+Method: KNN
+Amine: BAMDIFIROXTEEM-UHFFFAOYSA-N
+Data: 552
+Prediction: failure with probability 1.0
+True Class: failure
+Using only 100 samples because of too many background datas.
+
+
+Method: KNN
+Amine: XZUCBFLUEBDNSJ-UHFFFAOYSA-N
+Data: 888
+Prediction: success with probability 1.0
+True Class: success
+Using only 100 samples because of too many background datas.
+
+
+Method: KNN
+Amine: ZEVRFFCPALTVDN-UHFFFAOYSA-N
+Data: 59
+Prediction: failure with probability 0.5
+True Class: failure
+
+
+Method: KNN
+Amine: KFQARYBEAKAXIC-UHFFFAOYSA-N
+Data: 8
+Prediction: failure with probability 1.0
+True Class: failure
+
+
+Method: KNN
+Amine: NLJDBTZLVTWXRG-UHFFFAOYSA-N
+Data: 62
+Prediction: success with probability 1.0
+True Class: success
+
+
+Method: KNN
+Amine: LCTUISCIGMWMAT-UHFFFAOYSA-N
+Data: 8
+Prediction: failure with probability 1.0
+True Class: failure
+
+
+Method: KNN
+Amine: JERSPYRKVMAEJY-UHFFFAOYSA-N
+Data: 84
+Prediction: failure with probability 1.0
+True Class: failure
+
+
+Method: KNN
+Amine: VAWHFUNJDMQUSB-UHFFFAOYSA-N
+Data: 27
+Prediction: failure with probability 1.0
+True Class: failure
+
+
+Method: KNN
+Amine: WGYRINYTHSORGH-UHFFFAOYSA-N
+Data: 31
+Prediction: failure with probability 1.0
+True Class: failure
+
+
+Method: KNN
+Amine: VNAAUNTYIONOHR-UHFFFAOYSA-N
+Data: 64
+Prediction: failure with probability 1.0
+True Class: failure
+
+
+Method: KNN
+Amine: FJFIJIDZQADKEE-UHFFFAOYSA-N
+Data: 32
+Prediction: failure with probability 1.0
+True Class: failure
+
+
+Method: KNN
+Amine: XFYICZOIWSBQSK-UHFFFAOYSA-N
+Data: 29
+Prediction: failure with probability 1.0
+True Class: failure
+
+
+Method: KNN
+Amine: UMDDLGMCNFAZDX-UHFFFAOYSA-O
+Data: 23
+Prediction: failure with probability 0.5
+True Class: success
+
+
+Method: KNN
+Amine: HBPSMMXRESDUSG-UHFFFAOYSA-N
+Data: 5
+Prediction: failure with probability 1.0
+True Class: failure
+
+
+Method: KNN
+Amine: NXRUEVJQMBGVAT-UHFFFAOYSA-N
+Data: 12
+Prediction: failure with probability 1.0
+True Class: failure
+
+
+Method: KNN
+Amine: LLWRXQXPJMPHLR-UHFFFAOYSA-N
+Data: 26
+Prediction: failure with probability 1.0
+True Class: failure
+
+
+Method: KNN
+Amine: BAMDIFIROXTEEM-UHFFFAOYSA-N
+Data: 90
+Prediction: failure with probability 1.0
+True Class: failure
+
+
+Method: KNN
+Amine: XZUCBFLUEBDNSJ-UHFFFAOYSA-N
+Data: 10
+Prediction: failure with probability 1.0
+True Class: failure
+
+
+Method: Random Forest
+Amine: ZEVRFFCPALTVDN-UHFFFAOYSA-N
+Data: 1238
+Prediction: failure with probability 0.9553690770495668
+True Class: failure
+Using only 100 samples because of too many background datas.
+
+
+Method: Random Forest
+Amine: KFQARYBEAKAXIC-UHFFFAOYSA-N
+Data: 924
+Prediction: failure with probability 0.9646493579478927
+True Class: failure
+Using only 100 samples because of too many background datas.
+
+
+Method: Random Forest
+Amine: NLJDBTZLVTWXRG-UHFFFAOYSA-N
+Data: 1161
+Prediction: success with probability 0.782319165311812
+True Class: success
+Using only 100 samples because of too many background datas.
+
+
+Method: Random Forest
+Amine: LCTUISCIGMWMAT-UHFFFAOYSA-N
+Data: 647
+Prediction: success with probability 0.7391926448256938
+True Class: success
+Using only 100 samples because of too many background datas.
+
+
+Method: Random Forest
+Amine: JERSPYRKVMAEJY-UHFFFAOYSA-N
+Data: 957
+Prediction: failure with probability 0.6690081191514687
+True Class: success
+Using only 100 samples because of too many background datas.
+
+
+Method: Random Forest
+Amine: VAWHFUNJDMQUSB-UHFFFAOYSA-N
+Data: 59
+Prediction: failure with probability 0.9154408803182235
+True Class: failure
+Using only 100 samples because of too many background datas.
+
+
+Method: Random Forest
+Amine: WGYRINYTHSORGH-UHFFFAOYSA-N
+Data: 83
+Prediction: failure with probability 0.7787020843806435
+True Class: failure
+Using only 100 samples because of too many background datas.
+
+
+Method: Random Forest
+Amine: VNAAUNTYIONOHR-UHFFFAOYSA-N
+Data: 1175
+Prediction: failure with probability 0.8776380970376246
+True Class: failure
+Using only 100 samples because of too many background datas.
+
+
+Method: Random Forest
+Amine: FJFIJIDZQADKEE-UHFFFAOYSA-N
+Data: 1428
+Prediction: failure with probability 0.9974620037528956
+True Class: failure
+Using only 100 samples because of too many background datas.
+
+
+Method: Random Forest
+Amine: XFYICZOIWSBQSK-UHFFFAOYSA-N
+Data: 197
+Prediction: failure with probability 0.8364793033193081
+True Class: failure
+Using only 100 samples because of too many background datas.
+
+
+Method: Random Forest
+Amine: UMDDLGMCNFAZDX-UHFFFAOYSA-O
+Data: 1232
+Prediction: failure with probability 0.939433698395733
+True Class: failure
+Using only 100 samples because of too many background datas.
+
+
+Method: Random Forest
+Amine: HBPSMMXRESDUSG-UHFFFAOYSA-N
+Data: 1248
+Prediction: failure with probability 0.9874875904975664
+True Class: failure
+Using only 100 samples because of too many background datas.
+
+
+Method: Random Forest
+Amine: NXRUEVJQMBGVAT-UHFFFAOYSA-N
+Data: 1088
+Prediction: failure with probability 0.8969261623803382
+True Class: failure
+Using only 100 samples because of too many background datas.
+
+
+Method: Random Forest
+Amine: LLWRXQXPJMPHLR-UHFFFAOYSA-N
+Data: 1039
+Prediction: failure with probability 0.9042248145067983
+True Class: failure
+Using only 100 samples because of too many background datas.
+
+
+Method: Random Forest
+Amine: BAMDIFIROXTEEM-UHFFFAOYSA-N
+Data: 283
+Prediction: failure with probability 0.8177465845944084
+True Class: failure
+Using only 100 samples because of too many background datas.
+
+
+Method: Random Forest
+Amine: XZUCBFLUEBDNSJ-UHFFFAOYSA-N
+Data: 219
+Prediction: failure with probability 0.8944314553769432
+True Class: failure
+Using only 100 samples because of too many background datas.
+
+
+Method: Random Forest
+Amine: ZEVRFFCPALTVDN-UHFFFAOYSA-N
+Data: 37
+Prediction: success with probability 0.81
+True Class: success
+
+
+Method: Random Forest
+Amine: KFQARYBEAKAXIC-UHFFFAOYSA-N
+Data: 18
+Prediction: failure with probability 0.99
+True Class: failure
+
+
+Method: Random Forest
+Amine: NLJDBTZLVTWXRG-UHFFFAOYSA-N
+Data: 62
+Prediction: failure with probability 1.0
+True Class: failure
+
+
+Method: Random Forest
+Amine: LCTUISCIGMWMAT-UHFFFAOYSA-N
+Data: 28
+Prediction: failure with probability 0.86
+True Class: failure
+
+
+Method: Random Forest
+Amine: JERSPYRKVMAEJY-UHFFFAOYSA-N
+Data: 57
+Prediction: failure with probability 0.93
+True Class: failure
+
+
+Method: Random Forest
+Amine: VAWHFUNJDMQUSB-UHFFFAOYSA-N
+Data: 89
+Prediction: failure with probability 1.0
+True Class: failure
+
+
+Method: Random Forest
+Amine: WGYRINYTHSORGH-UHFFFAOYSA-N
+Data: 53
+Prediction: success with probability 0.7240000000000001
+True Class: success
+
+
+Method: Random Forest
+Amine: VNAAUNTYIONOHR-UHFFFAOYSA-N
+Data: 37
+Prediction: failure with probability 1.0
+True Class: failure
+
+
+Method: Random Forest
+Amine: FJFIJIDZQADKEE-UHFFFAOYSA-N
+Data: 36
+Prediction: failure with probability 0.98
+True Class: failure
+
+
+Method: Random Forest
+Amine: XFYICZOIWSBQSK-UHFFFAOYSA-N
+Data: 47
+Prediction: failure with probability 0.97
+True Class: failure
+
+
+Method: Random Forest
+Amine: UMDDLGMCNFAZDX-UHFFFAOYSA-O
+Data: 58
+Prediction: failure with probability 0.99
+True Class: failure
+
+
+Method: Random Forest
+Amine: HBPSMMXRESDUSG-UHFFFAOYSA-N
+Data: 81
+Prediction: failure with probability 0.93
+True Class: failure
+
+
+Method: Random Forest
+Amine: NXRUEVJQMBGVAT-UHFFFAOYSA-N
+Data: 80
+Prediction: failure with probability 1.0
+True Class: failure
+
+
+Method: Random Forest
+Amine: LLWRXQXPJMPHLR-UHFFFAOYSA-N
+Data: 16
+Prediction: failure with probability 0.9
+True Class: failure
+
+
+Method: Random Forest
+Amine: BAMDIFIROXTEEM-UHFFFAOYSA-N
+Data: 49
+Prediction: failure with probability 0.98
+True Class: failure
+
+
+Method: Random Forest
+Amine: XZUCBFLUEBDNSJ-UHFFFAOYSA-N
+Data: 58
+Prediction: failure with probability 1.0
+True Class: failure
+
+

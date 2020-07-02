@@ -31,7 +31,7 @@ all_amines = ['ZEVRFFCPALTVDN-UHFFFAOYSA-N',
                     'LLWRXQXPJMPHLR-UHFFFAOYSA-N',
                     'BAMDIFIROXTEEM-UHFFFAOYSA-N',
                     'XZUCBFLUEBDNSJ-UHFFFAOYSA-N']
-
+                    
 KNN_model = []
 RF_model = []
 #Unpickling all the files
@@ -46,14 +46,11 @@ for method in all_method:
 			else:
 				RF_model.append(pickle.load(infile))
 
-#infile = open("KNN_20_shot_2_way_option_2_BAMDIFIROXTEEM-UHFFFAOYSA-N/KNN_BAMDIFIROXTEEM-UHFFFAOYSA-N_option_2.pkl", "rb")
-#activeKNN = pickle.load(infile)
-
 #Define feature_names
 feature_name = ["_rxn_M_acid", "_rxn_M_inorganic", "_rxn_M_organic", "_solv_GBL", "_solv_DMSO", "_solv_DMF","_stoich_mmol_org",	"_stoich_mmol_inorg", "_stoich_mmol_acid", "_stoich_mmol_solv",	"_stoich_org/solv",	"_stoich_inorg/solv","_stoich_acid/solv", "_stoich_org+inorg/solv","_stoich_org+inorg+acid/solv","_stoich_org/liq","_stoich_inorg/liq","_stoich_org+inorg/liq", "_stoich_org/inorg", "_stoich_acid/inorg", "_rxn_Temperature_C",	"_rxn_Reactiontime_s", "_feat_AvgPol", "_feat_Refractivity", "_feat_MaximalProjectionArea",	"_feat_MaximalProjectionRadius", "_feat_maximalprojectionsize", "_feat_MinimalProjectionArea",	"_feat_MinimalProjectionRadius", "_feat_minimalprojectionsize",	"_feat_MolPol",	"_feat_VanderWaalsSurfaceArea",	"_feat_ASA", "_feat_ASA_H", "_feat_ASA_P",	"_feat_ASA-",	"_feat_ASA+", "_feat_ProtPolarSurfaceArea", "_feat_Hacceptorcount", "_feat_Hdonorcount","_feat_RotatableBondCount",	"_raw_standard_molweight", "_feat_AtomCount_N", "_feat_BondCount",	"_feat_ChainAtomCount",	"_feat_RingAtomCount", "_feat_primaryAmine",	"_feat_secondaryAmine",	"_rxn_plateEdgeQ", "_feat_maxproj_per_N", "_raw_RelativeHumidity"]
 class_name = ["failure", "success"]
 
-open('out.txt', 'w')
+open('out_shap.txt', 'w')
 
 model_list = [KNN_model, RF_model]
 for model_index in range(2):
@@ -68,50 +65,56 @@ for model_index in range(2):
 		y_pred = model.predict(x_true)
 		y_pred_prob = model.predict_proba(x_true)
 
-        explainer = shap.KernelExplainer(model.predict_proba, x_true)
-        shap_values = explainer.shap_values(x_true)
-        shap.force_plot(explainer.expected_value[0], shap_values[0], X_test)
+		i = np.random.randint(0, len(x_true)-2)
 
-        #Explaining a single instance
-        #shap_values = explainer.shap_values(x_test.iloc[0,:])
-        #shap.force_plot(explainer.expected_value[0], shap_values[0], X_test.iloc[0,:])  
+		with open('out_shap.txt', 'a') as f:
+			if model_index == 0:
+				print("Method: KNN", file = f)
+			else:
+				print("Method: Random Forest", file = f)
+			print("Amine:", amine, file = f)
+			print("Data:", str(i), file = f)
+			print("Prediction:", class_name[y_pred[i]], "with probability", str(y_pred_prob[i][y_pred[i]]), file = f)
+			print("True Class:", class_name[y_true[i]], file = f)
 
-		#for i in range(len(x_true)):
-		# i = np.random.randint(0, len(x_true))
-		# exp = explainer.explain_instance(x_true[i], model.predict_proba, num_features = 10)
-		# lst_explanation = exp.as_list()
+
+		#mean_x_true = shap.kmeans(x_true, 10)
+		if len(x_true)>100:
+			sampled_x_true = shap.sample(x_true, 100)
+			with open('out_shap.txt', 'a') as f:
+				print("Using only 100 samples because of too many background datas.", file = f)
+		else:
+			sampled_x_true = x_true
 		
-		# with open('out.txt', 'a') as f:
-
-		# 	if model_index == 0:
-		# 		print("Method: KNN", file = f)
-		# 	else:
-		# 		print("Method: Random Forest", file = f)
-		# 	print("Amine:", amine, file = f)
-		# 	print("Data:", str(i), file = f)
-		# 	print("Prediction:", class_name[y_pred[i]], "with probability", str(y_pred_prob[i][y_pred[i]]), file = f)
-		# 	print("True Class:", class_name[y_true[i]], file = f)
-		# 	print("Explanation:", lst_explanation, file = f)
-		# 	print("\n", file = f)
+		with open('out_shap.txt', 'a') as f:
+			print("\n", file = f)
+				
 		
-		# #fig_explanation = exp.as_pyplot_figure()
+
+		explainer = shap.KernelExplainer(model.predict_proba, sampled_x_true)
+		shap_single_values = explainer.shap_values(x_true[i:i+1])
+		#fig = shap.summary_plot(shap_values, features = x_true, feature_names = feature_name, max_display = 10, class_names = class_name, title = "Feature Importance", show = False)
+		fig = shap.force_plot(explainer.expected_value[0], shap_single_values[0], x_true[i:i+1], show = False, feature_names = feature_name, matplotlib = True, text_rotation = 10, figsize = (20, 5))
 		
-		# #Plotting the figure
-		# fig = plt.figure()
-		# vals = [x[1] for x in lst_explanation]
-		# names = [x[0] for x in lst_explanation]
-		# vals.reverse()
-		# names.reverse()
-		# colors = ['green' if x > 0 else 'red' for x in vals]
-		# pos = np.arange(len(lst_explanation)) + .5
-		# plt.barh(pos, vals, align='edge', color=colors)
-		# plt.yticks(pos, names)
-		# plt.title('Local Explanation')
+		if model_index == 0:
+			fig_name = "fig_force_shap/ShapForce_KNN_" + amine + "_" + str(i) + ".png"
+		else:
+			fig_name = "fig_force_shap/ShapForce_RF_" + amine + "_" + str(i) + ".png"
+		plt.savefig(fig_name, bbox_inches = 'tight')
+		plt.close()
+	
+"""
+		for name in feature_name:
+			fig = shap.dependence_plot(name, shap_values[0], x_true, show = False, feature_names = feature_name)
+			
+				if model_index == 0:
+			fig_name = "fig_force_shap/ShapForce_KNN_" + amine + "_" + str(i) + ".png"
+		else:
+			fig_name = "fig_force_shap/ShapForce_RF_" + amine + "_" + str(i) + ".png"
+		plt.savefig(fig_name, bbox_inches = 'tight')
+		plt.close()
+"""
 
-		# if model_index == 0:
-		# 	fig_name = "fig/Lime_KNN_" + amine + "_" + str(i) + ".png"
-		# else:
-		# 	fig_name = "fig/Lime_RF_" + amine + "_" + str(i) + ".png"
-		# fig.savefig(fig_name, bbox_inches = 'tight')
-
-		# plt.close()
+		
+		
+		
