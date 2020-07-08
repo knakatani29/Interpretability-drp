@@ -47,7 +47,7 @@ for method in all_method:
 				RF_model.append(pickle.load(infile))
 
 #Define feature_names
-feature_name = ["_rxn_M_acid", "_rxn_M_inorganic", "_rxn_M_organic", "_solv_GBL", "_solv_DMSO", "_solv_DMF","_stoich_mmol_org",	"_stoich_mmol_inorg", "_stoich_mmol_acid", "_stoich_mmol_solv",	"_stoich_org/solv",	"_stoich_inorg/solv","_stoich_acid/solv", "_stoich_org+inorg/solv","_stoich_org+inorg+acid/solv","_stoich_org/liq","_stoich_inorg/liq","_stoich_org+inorg/liq", "_stoich_org/inorg", "_stoich_acid/inorg", "_rxn_Temperature_C",	"_rxn_Reactiontime_s", "_feat_AvgPol", "_feat_Refractivity", "_feat_MaximalProjectionArea",	"_feat_MaximalProjectionRadius", "_feat_maximalprojectionsize", "_feat_MinimalProjectionArea",	"_feat_MinimalProjectionRadius", "_feat_minimalprojectionsize",	"_feat_MolPol",	"_feat_VanderWaalsSurfaceArea",	"_feat_ASA", "_feat_ASA_H", "_feat_ASA_P",	"_feat_ASA-",	"_feat_ASA+", "_feat_ProtPolarSurfaceArea", "_feat_Hacceptorcount", "_feat_Hdonorcount","_feat_RotatableBondCount",	"_raw_standard_molweight", "_feat_AtomCount_N", "_feat_BondCount",	"_feat_ChainAtomCount",	"_feat_RingAtomCount", "_feat_primaryAmine",	"_feat_secondaryAmine",	"_rxn_plateEdgeQ", "_feat_maxproj_per_N", "_raw_RelativeHumidity"]
+feature_name = ["_rxn_M_acid", "_rxn_M_inorganic", "_rxn_M_organic", "_solv_GBL", "_solv_DMSO", "_solv_DMF","_stoich_mmol_org",	"_stoich_mmol_inorg", "_stoich_mmol_acid", "_stoich_mmol_solv",	"_stoich_org-solv",	"_stoich_inorg-solv","_stoich_acid-solv", "_stoich_org+inorg-solv","_stoich_org+inorg+acid-solv","_stoich_org-liq","_stoich_inorg-liq","_stoich_org+inorg-liq", "_stoich_org-inorg", "_stoich_acid-inorg", "_rxn_Temperature_C",	"_rxn_Reactiontime_s", "_feat_AvgPol", "_feat_Refractivity", "_feat_MaximalProjectionArea",	"_feat_MaximalProjectionRadius", "_feat_maximalprojectionsize", "_feat_MinimalProjectionArea",	"_feat_MinimalProjectionRadius", "_feat_minimalprojectionsize",	"_feat_MolPol",	"_feat_VanderWaalsSurfaceArea",	"_feat_ASA", "_feat_ASA_H", "_feat_ASA_P",	"_feat_ASA-",	"_feat_ASA+", "_feat_ProtPolarSurfaceArea", "_feat_Hacceptorcount", "_feat_Hdonorcount","_feat_RotatableBondCount",	"_raw_standard_molweight", "_feat_AtomCount_N", "_feat_BondCount",	"_feat_ChainAtomCount",	"_feat_RingAtomCount", "_feat_primaryAmine",	"_feat_secondaryAmine",	"_rxn_plateEdgeQ", "_feat_maxproj_per_N", "_raw_RelativeHumidity"]
 class_name = ["failure", "success"]
 
 open('out_shap.txt', 'w')
@@ -65,7 +65,7 @@ for model_index in range(2):
 		y_pred = model.predict(x_true)
 		y_pred_prob = model.predict_proba(x_true)
 
-		i = np.random.randint(0, len(x_true)-2)
+		#i = np.random.randint(0, len(x_true)-2)
 
 		with open('out_shap.txt', 'a') as f:
 			if model_index == 0:
@@ -73,9 +73,9 @@ for model_index in range(2):
 			else:
 				print("Method: Random Forest", file = f)
 			print("Amine:", amine, file = f)
-			print("Data:", str(i), file = f)
-			print("Prediction:", class_name[y_pred[i]], "with probability", str(y_pred_prob[i][y_pred[i]]), file = f)
-			print("True Class:", class_name[y_true[i]], file = f)
+			#print("Data:", str(i), file = f)
+			#print("Prediction:", class_name[y_pred[i]], "with probability", str(y_pred_prob[i][y_pred[i]]), file = f)
+			#print("True Class:", class_name[y_true[i]], file = f)
 
 
 		#mean_x_true = shap.kmeans(x_true, 10)
@@ -93,29 +93,30 @@ for model_index in range(2):
 
 		explainer = shap.KernelExplainer(model.predict_proba, sampled_x_true)
 
-		"""
-		shap_single_values = explainer.shap_values(x_true[i:i+1])
-		#fig = shap.summary_plot(shap_values, features = x_true, feature_names = feature_name, max_display = 10, class_names = class_name, title = "Feature Importance", show = False)
-		fig = shap.force_plot(explainer.expected_value[0], shap_single_values[0], x_true[i:i+1], show = False, feature_names = feature_name, matplotlib = True, text_rotation = 10, figsize = (20, 5))
+		shap_values = explainer.shap_values(x_true)
+		fig = shap.summary_plot(shap_values[0], features = x_true, feature_names = feature_name, max_display = 10, class_names = ["Failure"], title = "Feature Importance", show = False)
+		#fig = shap.force_plot(explainer.expected_value[0], shap_single_values[0], x_true[i:i+1], show = False, feature_names = feature_name, matplotlib = True, text_rotation = 10, figsize = (20, 5))
 		
 		if model_index == 0:
-			fig_name = "fig_force_shap/ShapForce_KNN_" + amine + "_" + str(i) + ".png"
+			fig_name = "fig_summary_shap/ShapForce_KNN_" + amine + "_" + ".png"
 		else:
-			fig_name = "fig_force_shap/ShapForce_RF_" + amine + "_" + str(i) + ".png"
+			fig_name = "fig_summary_shap/ShapForce_RF_" + amine + "_" + ".png"
 		plt.savefig(fig_name, bbox_inches = 'tight')
 		plt.close()
 	
+
 		"""
 		shap_values = explainer.shap_values(x_true)
 		for name in feature_name:
 			fig = shap.dependence_plot(name, shap_values[0], x_true, show = False, feature_names = feature_name)
 	
-		if model_index == 0:
-			fig_name = "fig_dep_shap/ShapForce_KNN_" + amine + "_" + str(i) + ".png"
-		else:
-			fig_name = "fig_dep_shap/ShapForce_RF_" + amine + "_" + str(i) + ".png"
-		plt.savefig(fig_name, bbox_inches = 'tight')
-		plt.close()
+			if model_index == 0:
+				fig_name = "fig_dep_shap/ShapForce_KNN_" + amine + "_" + str(i) + "_" + name + ".png"
+			else:
+				fig_name = "fig_dep_shap/ShapForce_RF_" + amine + "_" + str(i) + "_" + name + ".png"
+			plt.savefig(fig_name, bbox_inches = 'tight')
+			plt.close()
+		"""
 
 
 		
