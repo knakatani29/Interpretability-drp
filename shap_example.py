@@ -32,8 +32,10 @@ all_amines = ['ZEVRFFCPALTVDN-UHFFFAOYSA-N',
                     'BAMDIFIROXTEEM-UHFFFAOYSA-N',
                     'XZUCBFLUEBDNSJ-UHFFFAOYSA-N']
                     
-KNN_model = []
-RF_model = []
+KNN_model1 = []
+KNN_model2 = []
+RF_model1 = []
+RF_model2 = []
 #Unpickling all the files
 for method in all_method:
 	for option in all_option:
@@ -42,9 +44,15 @@ for method in all_method:
 			file_name = method + "_" + amine + "_" + option + ".pkl"
 			infile = open(directory_name + file_name, "rb")
 			if method == 'KNN':
-				KNN_model.append(pickle.load(infile))
+				if option == 'option_1':
+					KNN_model1.append(pickle.load(infile))
+				else:
+					KNN_model2.append(pickle.load(infile))
 			else:
-				RF_model.append(pickle.load(infile))
+				if option == 'option_1':
+					RF_model1.append(pickle.load(infile))
+				else:
+					RF_model2.append(pickle.load(infile))
 
 #Define feature_names
 feature_name = ["_rxn_M_acid", "_rxn_M_inorganic", "_rxn_M_organic", "_solv_GBL", "_solv_DMSO", "_solv_DMF","_stoich_mmol_org",	"_stoich_mmol_inorg", "_stoich_mmol_acid", "_stoich_mmol_solv",	"_stoich_org-solv",	"_stoich_inorg-solv","_stoich_acid-solv", "_stoich_org+inorg-solv","_stoich_org+inorg+acid-solv","_stoich_org-liq","_stoich_inorg-liq","_stoich_org+inorg-liq", "_stoich_org-inorg", "_stoich_acid-inorg", "_rxn_Temperature_C",	"_rxn_Reactiontime_s", "_feat_AvgPol", "_feat_Refractivity", "_feat_MaximalProjectionArea",	"_feat_MaximalProjectionRadius", "_feat_maximalprojectionsize", "_feat_MinimalProjectionArea",	"_feat_MinimalProjectionRadius", "_feat_minimalprojectionsize",	"_feat_MolPol",	"_feat_VanderWaalsSurfaceArea",	"_feat_ASA", "_feat_ASA_H", "_feat_ASA_P",	"_feat_ASA-",	"_feat_ASA+", "_feat_ProtPolarSurfaceArea", "_feat_Hacceptorcount", "_feat_Hdonorcount","_feat_RotatableBondCount",	"_raw_standard_molweight", "_feat_AtomCount_N", "_feat_BondCount",	"_feat_ChainAtomCount",	"_feat_RingAtomCount", "_feat_primaryAmine",	"_feat_secondaryAmine",	"_rxn_plateEdgeQ", "_feat_maxproj_per_N", "_raw_RelativeHumidity"]
@@ -52,8 +60,8 @@ class_name = ["failure", "success"]
 
 open('out_shap.txt', 'w')
 
-model_list = [KNN_model, RF_model]
-for model_index in range(2):
+model_list = [KNN_model1, KNN_model2, RF_model1, RF_model2]
+for model_index in range(4):
 	for activemodel in model_list[model_index]:
 		#Getting the model, amine name, training data (x_true), training label (y_true).
 		model = activemodel.model
@@ -79,6 +87,7 @@ for model_index in range(2):
 
 
 		#mean_x_true = shap.kmeans(x_true, 10)
+		
 		if len(x_true)>100:
 			sampled_x_true = shap.sample(x_true, 100)
 			with open('out_shap.txt', 'a') as f:
@@ -89,18 +98,21 @@ for model_index in range(2):
 		with open('out_shap.txt', 'a') as f:
 			print("\n", file = f)
 				
-		
-
+	
 		explainer = shap.KernelExplainer(model.predict_proba, sampled_x_true)
 
-		shap_values = explainer.shap_values(x_true)
-		fig = shap.summary_plot(shap_values[0], features = x_true, feature_names = feature_name, max_display = 10, class_names = ["Failure"], title = "Feature Importance", show = False)
+		shap_values = explainer.shap_values(x_true, nsamples = 90)
+		fig = shap.summary_plot(shap_values[0], features = x_true, feature_names = feature_name, max_display = 51, class_names = ["Failure"], title = "Feature Importance", show = False)
 		#fig = shap.force_plot(explainer.expected_value[0], shap_single_values[0], x_true[i:i+1], show = False, feature_names = feature_name, matplotlib = True, text_rotation = 10, figsize = (20, 5))
 		
 		if model_index == 0:
-			fig_name = "fig_summary_shap/ShapForce_KNN_" + amine + "_" + ".png"
+			fig_name = "fig_summary_shap/ShapForce_KNN_option1_" + amine + "_" + ".png"
+		elif model_index == 1:
+			fig_name = "fig_summary_shap/ShapForce_KNN_option2_" + amine + "_" + ".png"
+		elif model_index == 2:
+			fig_name = "fig_summary_shap/ShapForce_RF_option1_" + amine + "_" + ".png"
 		else:
-			fig_name = "fig_summary_shap/ShapForce_RF_" + amine + "_" + ".png"
+			fig_name = "fig_summary_shap/ShapForce_RF_option2_" + amine + "_" + ".png"
 		plt.savefig(fig_name, bbox_inches = 'tight')
 		plt.close()
 	
