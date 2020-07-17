@@ -102,17 +102,17 @@ for model_index in range(4):
 		explainer = shap.KernelExplainer(model.predict_proba, sampled_x_true)
 
 		shap_values = explainer.shap_values(x_true, nsamples = 90)
-		fig = shap.summary_plot(shap_values[0], features = x_true, feature_names = feature_name, max_display = 51, class_names = ["Failure"], title = "Feature Importance", show = False)
+		fig = shap.summary_plot(shap_values[0], features = x_true, feature_names = feature_name, max_display = 51, class_names = ["Failure"], title = "Feature Importance", show = False, sort = False)
 		#fig = shap.force_plot(explainer.expected_value[0], shap_single_values[0], x_true[i:i+1], show = False, feature_names = feature_name, matplotlib = True, text_rotation = 10, figsize = (20, 5))
 		
 		if model_index == 0:
-			fig_name = "fig_summary_shap/ShapForce_KNN_option1_" + amine + "_" + ".png"
+			fig_name = "fig_summary_shap/ShapSum_KNN_option1_" + amine + "_" + ".png"
 		elif model_index == 1:
-			fig_name = "fig_summary_shap/ShapForce_KNN_option2_" + amine + "_" + ".png"
+			fig_name = "fig_summary_shap/ShapSum_KNN_option2_" + amine + "_" + ".png"
 		elif model_index == 2:
-			fig_name = "fig_summary_shap/ShapForce_RF_option1_" + amine + "_" + ".png"
+			fig_name = "fig_summary_shap/ShapSum_RF_option1_" + amine + "_" + ".png"
 		else:
-			fig_name = "fig_summary_shap/ShapForce_RF_option2_" + amine + "_" + ".png"
+			fig_name = "fig_summary_shap/ShapSum_RF_option2_" + amine + "_" + ".png"
 		plt.savefig(fig_name, bbox_inches = 'tight')
 		plt.close()
 	
