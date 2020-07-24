@@ -4,6 +4,7 @@ from SVM import ActiveSVM
 from RandomForest import ActiveRandomForest
 import BlackBoxAuditing as BBA
 import numpy as np
+import pandas as pd
 import matplotlib.pyplot as plt
 import sys
 
@@ -41,14 +42,48 @@ for method in all_method:
 				RF_model.append(pickle.load(infile))
 
 #Define feature_names
-feature_name = ["_rxn_M_acid", "_rxn_M_inorganic", "_rxn_M_organic", "_solv_GBL", "_solv_DMSO", "_solv_DMF","_stoich_mmol_org",	"_stoich_mmol_inorg", "_stoich_mmol_acid", "_stoich_mmol_solv",	"_stoich_org/solv",	"_stoich_inorg/solv","_stoich_acid/solv", "_stoich_org+inorg/solv","_stoich_org+inorg+acid/solv","_stoich_org/liq","_stoich_inorg/liq","_stoich_org+inorg/liq", "_stoich_org/inorg", "_stoich_acid/inorg", "_rxn_Temperature_C",	"_rxn_Reactiontime_s", "_feat_AvgPol", "_feat_Refractivity", "_feat_MaximalProjectionArea",	"_feat_MaximalProjectionRadius", "_feat_maximalprojectionsize", "_feat_MinimalProjectionArea",	"_feat_MinimalProjectionRadius", "_feat_minimalprojectionsize",	"_feat_MolPol",	"_feat_VanderWaalsSurfaceArea",	"_feat_ASA", "_feat_ASA_H", "_feat_ASA_P",	"_feat_ASA-",	"_feat_ASA+", "_feat_ProtPolarSurfaceArea", "_feat_Hacceptorcount", "_feat_Hdonorcount","_feat_RotatableBondCount",	"_raw_standard_molweight", "_feat_AtomCount_N", "_feat_BondCount",	"_feat_ChainAtomCount",	"_feat_RingAtomCount", "_feat_primaryAmine",	"_feat_secondaryAmine",	"_rxn_plateEdgeQ", "_feat_maxproj_per_N", "_raw_RelativeHumidity"]
+feature_name = ["_rxn_M_acid", "_rxn_M_inorganic", "_rxn_M_organic", "_solv_GBL", "_solv_DMSO", "_solv_DMF","_stoich_mmol_org",	"_stoich_mmol_inorg", "_stoich_mmol_acid", "_stoich_mmol_solv",	"_stoich_org-solv",	"_stoich_inorg-solv","_stoich_acid-solv", "_stoich_org+inorg-solv","_stoich_org+inorg+acid-solv","_stoich_org-liq","_stoich_inorg-liq","_stoich_org+inorg-liq", "_stoich_org-inorg", "_stoich_acid-inorg", "_rxn_Temperature_C",	"_rxn_Reactiontime_s", "_feat_AvgPol", "_feat_Refractivity", "_feat_MaximalProjectionArea",	"_feat_MaximalProjectionRadius", "_feat_maximalprojectionsize", "_feat_MinimalProjectionArea",	"_feat_MinimalProjectionRadius", "_feat_minimalprojectionsize",	"_feat_MolPol",	"_feat_VanderWaalsSurfaceArea",	"_feat_ASA", "_feat_ASA_H", "_feat_ASA_P",	"_feat_ASA-",	"_feat_ASA+", "_feat_ProtPolarSurfaceArea", "_feat_Hacceptorcount", "_feat_Hdonorcount","_feat_RotatableBondCount",	"_raw_standard_molweight", "_feat_AtomCount_N", "_feat_BondCount",	"_feat_ChainAtomCount",	"_feat_RingAtomCount", "_feat_primaryAmine",	"_feat_secondaryAmine",	"_rxn_plateEdgeQ", "_feat_maxproj_per_N", "_raw_RelativeHumidity"]
 class_name = ["failure", "success"]
+
+#correct_type = [float]*51
+
+
 
 open('out_BBA.txt', 'w')
 
+correct_type = [float]*51
+for i in range(len(KNN_model[0].x_t [0])):
+	correct_type[i] = type(KNN_model[0].x_t [0][i])
+
+print(correct_type)
+
 auditor = BBA.Auditor()
-auditor.ModelFactory = KNN_model[0]
-auditor(KNN_model[0].x_t, output_dir="output_BBA")
+
+a = KNN_model[0].y_t.reshape((1661, 1))
+
+numpy_data = np.append(KNN_model[0].x_t, a, axis = 1)
+
+column = feature_name + ["result"]
+
+df = pd.DataFrame(data=numpy_data, columns=column)
+df.to_csv("/tmp/test.csv", index=False, columns=column) 
+drp_data = BBA.load_from_file("/tmp/test.csv", correct_types = correct_type, train_percentage = 0)
+
+from BlackBoxAuditing.model_factories.AbstractModelFactory import AbstractModelFactory
+from BlackBoxAuditing.model_factories.SKLearnModelVisitor import SKLearnModelVisitor
+
+
+auditor.trained_model = SKLearnModelVisitor(KNN_model[0].model, label_index = 0)
+
+#print(type(drp_data[2][0][0]))
+#print(type(auditor.trained_model.get_Xy(drp_data[2])[0][0, 0]))
+
+auditor(drp_data, features_to_audit = feature_name, output_dir = "output_BBA")
+
+#auditor.find_contexts('_feat_ChainAtomCount', output_dir="synthetic-audit-output")
+
+
+
 
 """
 model_list = [KNN_model, RF_model]
